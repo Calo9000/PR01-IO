@@ -52,6 +52,9 @@ int ejemplo(){
 int experimento(int n){
 
     for(int i = 0; i<10*n; i++){
+
+        printf("%d\n",i);
+
         // cantidad de objetos
         int n = rand() % 91 + 10;
         //printf("Cantidad de objetos: %d\n",n);
@@ -70,7 +73,7 @@ int experimento(int n){
             //printf("Objeto %d-> Valor: %d, Peso: %d\n", i, valor[i], peso[i]);
         }
 
-        struct timespec start, end;
+        struct timespec start, end, start1, end1;
 
         clock_gettime(CLOCK_REALTIME, &start);
         int pd = dinamico(c, valor, peso, n);
@@ -78,19 +81,22 @@ int experimento(int n){
         double d_pd = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
         printf("Algoritmo de programación dinámica:\nResultado: %d\nTiempo de ejecución: %f\n", pd, d_pd);
         printf("\n");
-        clock_gettime(CLOCK_REALTIME, &start);
-        printf("#");
-        int gr = greedy(c, valor, peso, n);
-        clock_gettime(CLOCK_REALTIME, &end);
-        double d_gr = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
-        printf("Algoritmo greedy:\nResultado: %d\nTiempo de ejecución: %f\n", gr, d_gr);
-        printf("\n");
+        
         clock_gettime(CLOCK_REALTIME, &start);
         int pr = proporcional(c, valor, peso, n);
         clock_gettime(CLOCK_REALTIME, &end);
         double d_pr = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
         printf("Algoritmo greedy proporcional:\nResultado: %d\nTiempo de ejecución: %f\n", pr, d_pr);
         printf("\n");
+
+        clock_gettime(CLOCK_REALTIME, &start1);
+        printf("#");
+        int gr = greedy(c, valor, peso, n);
+        clock_gettime(CLOCK_REALTIME, &end1);
+        double d_gr = (end1.tv_sec-start1.tv_sec)+(end1.tv_nsec-start1.tv_nsec)/1000000000.0;
+        printf("Algoritmo greedy:\nResultado: %d\nTiempo de ejecución: %f\n", gr, d_gr);
+        printf("\n");
+
     }
 
     return 0;

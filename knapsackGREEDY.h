@@ -3,46 +3,41 @@
 
 // ALGORITMO GREEDY
 
-int partition(int A[], int B[], int p, int r) {
-    int x = A[p]; // pivot
-    int i = p;
-    int j = r;
-    while (1) {
+int partition(int A[], int B[], int low, int high) {
+    int p = A[high];
+    int i = low-1;
 
-        while (A[i] > x) {
+    for(int j = low; j <= high - 1; j++){
+        if (A[j] > p){
             i++;
-        }
-
-        while (A[j] < x) {
-            j--;
-        }
-        if (i < j) {
             int temp = A[i];
-            int temp_peso = B[i];
             A[i] = A[j];
-            B[i] = B[j];
             A[j] = temp;
-            B[j] = temp_peso;
-        } else {
-            return j;
+            int Btemp = B[i];
+            B[i] = B[j];
+            B[j] = Btemp;
         }
     }
+    int temp = A[i+1];
+    A[i+1] = A[high];
+    A[high] = temp;
+    return (i+1);
 }
 
 
-void quicksort(int A[], int B[], int p, int r) {
-    if (p < r) {
-        int q = partition(A, B, p, r);
-        quicksort(A, B, p, q);
-        quicksort(A, B, q + 1, r);
+void quicksort(int A[], int B[], int low, int high) {
+    if(low<high){
+        int p = partition(A, B, low, high);
+        quicksort(A, B, low, p-1);
+        quicksort(A, B, p+1, high);
     }
 }
+
+
 
 // Returns the maximum value that can be put in a knapsack of capacity W
 int greedy(int C, int valor[], int peso[], int n)
 {
-    //printf(" ");
-    int saco[n];
     int total = 0;
     int capacidad = C;
     
@@ -73,32 +68,3 @@ int greedy(int C, int valor[], int peso[], int n)
     
    return total;
 }
-
-
-/*
-int main()
-{
-
-	// cantidad de objetos
-	int n = rand() % 10;
-    printf("Cantidad de objetos: %d\n",n);
-
-	// capacidad del saco
-    int  c = rand() % 100;
-    printf("Capacidad del saco: %d\n",c);
-
-	int valor[n];
-	int peso[n];
-	for (int i = 0; i<n; i++){
-		// valor de los objetos
-		valor[i] = rand() % 10000;
-		// peso de los objetos
-		peso[i] = rand() % 50;
-		printf("Objeto %d-> Valor: %d, Peso: %d\n", i, valor[i], peso[i]);
-	}
-
-
-    printf("\nValor = %d\n", greedy(c, valor, peso, n));
-    return 0;
-}
-*/
