@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ALGORITMO GREEDY PROPORCIONAL
+// ALGORITMO GREEDY
 
-int partitionProporcional(int A[], int B[], int C[], int p, int r) {
+int partition(int A[], int B[], int p, int r) {
     int x = A[p]; // pivot
     int i = p;
     int j = r;
@@ -19,13 +19,10 @@ int partitionProporcional(int A[], int B[], int C[], int p, int r) {
         if (i < j) {
             int temp = A[i];
             int temp_peso = B[i];
-            int temp_rend = C[i];
             A[i] = A[j];
             B[i] = B[j];
-            C[i] = C[j];
             A[j] = temp;
             B[j] = temp_peso;
-            C[j] = temp_rend;
         } else {
             return j;
         }
@@ -33,40 +30,34 @@ int partitionProporcional(int A[], int B[], int C[], int p, int r) {
 }
 
 
-void quicksortProporcional(int A[], int B[], int C[], int p, int r) {
+void quicksort(int A[], int B[], int p, int r) {
     if (p < r) {
-        int q = partitionProporcional(A, B, C, p, r);
-        quicksortProporcional(A, B, C, p, q);
-        quicksortProporcional(A, B, C, q + 1, r);
+        int q = partition(A, B, p, r);
+        quicksort(A, B, p, q);
+        quicksort(A, B, q + 1, r);
     }
 }
 
 // Returns the maximum value that can be put in a knapsack of capacity W
-int proporcional(int C, int valor[], int peso[], int n)
+int greedy(int C, int valor[], int peso[], int n)
 {
+    //printf(" ");
+    int saco[n];
     int total = 0;
     int capacidad = C;
     
-    int rendimiento[n];
-
-    for(int i; i<n; i++){
-        rendimiento[i] = (valor[i]*1000)/peso[i];
-        //printf("rendimiento %d: %d\n", i, rendimiento[i]);
-    }
-
-
-    quicksortProporcional(rendimiento,peso,valor,0,n-1);
+    quicksort(valor,peso,0,n-1);
 
     /*
     printf("\nLista Ordenada \n");
     for (int i=0; i<n; i++) {
-        printf("%d",rendimiento[i]);
+        printf("%d",valor[i]);
         if(i<n-1)
             printf(",");
     }
     printf("\n");
     for (int i=0; i<n; i++) {
-        printf("%d",valor[i]);
+        printf("%d",peso[i]);
         if(i<n-1)
             printf(",");
     }
@@ -84,27 +75,30 @@ int proporcional(int C, int valor[], int peso[], int n)
 }
 
 
+/*
 int main()
 {
 
 	// cantidad de objetos
-	int n = 6;
+	int n = rand() % 10;
     printf("Cantidad de objetos: %d\n",n);
 
 	// capacidad del saco
-    int  c = 15;
+    int  c = rand() % 100;
     printf("Capacidad del saco: %d\n",c);
 
 	int valor[n];
 	int peso[n];
 	for (int i = 0; i<n; i++){
 		// valor de los objetos
-		valor[i] = rand() % 20 + 1;
+		valor[i] = rand() % 10000;
 		// peso de los objetos
-		peso[i] = rand() % 7 + 1;
+		peso[i] = rand() % 50;
 		printf("Objeto %d-> Valor: %d, Peso: %d\n", i, valor[i], peso[i]);
 	}
 
-    printf("\nValor = %d\n", proporcional(c, valor, peso, n));
+
+    printf("\nValor = %d\n", greedy(c, valor, peso, n));
     return 0;
 }
+*/

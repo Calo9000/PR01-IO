@@ -44,6 +44,8 @@ void quicksortProporcional(int A[], int B[], int C[], int p, int r) {
 // Returns the maximum value that can be put in a knapsack of capacity W
 int proporcional(int C, int valor[], int peso[], int n)
 {
+    printf(" ");  // EL ALGORITMO NO SIRVE SI SE BORRA ESTO
+
     int total = 0;
     int capacidad = C;
     
@@ -83,28 +85,30 @@ int proporcional(int C, int valor[], int peso[], int n)
    return total;
 }
 
-
+/*
 int main()
 {
 
 	// cantidad de objetos
-	int n = 6;
+	int n = rand() % 10;
     printf("Cantidad de objetos: %d\n",n);
 
 	// capacidad del saco
-    int  c = 15;
+    int  c = rand() % 100;
     printf("Capacidad del saco: %d\n",c);
 
 	int valor[n];
 	int peso[n];
 	for (int i = 0; i<n; i++){
 		// valor de los objetos
-		valor[i] = rand() % 20 + 1;
+		valor[i] = rand() % 10000;
 		// peso de los objetos
-		peso[i] = rand() % 7 + 1;
+		peso[i] = rand() % 50;
 		printf("Objeto %d-> Valor: %d, Peso: %d\n", i, valor[i], peso[i]);
 	}
+
 
     printf("\nValor = %d\n", proporcional(c, valor, peso, n));
     return 0;
 }
+*/
