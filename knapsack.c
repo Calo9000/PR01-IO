@@ -51,53 +51,132 @@ int ejemplo(){
 
 int experimento(int n){
 
-    for(int i = 0; i<10*n; i++){
+    double promedios_pd[10][10], promedios_g[10][10], promedios_gp[10][10];
 
-        printf("%d\n",i);
+    int coincidencias_g = 0, coincidencias_gp = 0;
 
-        // cantidad de objetos
-        int n = rand() % 91 + 10;
-        //printf("Cantidad de objetos: %d\n",n);
+    int contador = 0;
 
-        // capacidad del saco
-        int  c = rand() % 901 + 100;
-        //printf("Capacidad del saco: %d\n",c);
+    int i, j, k;
+    for(i = 0; i<10; i++){
+        for(j = 0; j<10; j++){
+            //printf("%d, %d\n", i, j);
+            double tiempos_pd[n], tiempos_g[n], tiempos_gp[n];
+            for(k = 0; k<n; k++){
+                //printf("%d\n",i);
 
-        int valor[n];
-        int peso[n];
-        for (int i = 0; i<n; i++){
-            // valor de los objetos
-            valor[i] = rand() % 100 + 1;
-            // peso de los objetos
-            peso[i] = rand() % 4*c/10 + 1;
-            //printf("Objeto %d-> Valor: %d, Peso: %d\n", i, valor[i], peso[i]);
+                // cantidad de objetos
+                int n = (j+1)*10;
+                //printf("Cantidad de objetos: %d\n",n);
+
+                // capacidad del saco
+                int  c = (i+1)*100;
+                //printf("Capacidad del saco: %d\n",c);
+
+                int valor[n];
+                int peso[n];
+                for (int a = 0; a<n; a++){
+                    // valor de los objetos
+                    valor[a] = rand() % 100 + 1;
+                    // peso de los objetos
+                    peso[a] = rand() % 4*c/10 + 1;
+                    //printf("Objeto %d-> Valor: %d, Peso: %d\n", i, valor[i], peso[i]);
+                }
+
+                struct timespec start, end;
+
+                clock_gettime(CLOCK_REALTIME, &start);
+                int pd = dinamico(c, valor, peso, n);
+                clock_gettime(CLOCK_REALTIME, &end);
+                double d_pd = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
+                tiempos_pd[k] = d_pd;
+                //printf("Algoritmo de programación dinámica:\nResultado: %d\nTiempo de ejecución: %f\n", pd, d_pd);
+                //printf("\n");
+                
+                clock_gettime(CLOCK_REALTIME, &start);
+                //printf("#");
+                int gr = greedy(c, valor, peso, n);
+                clock_gettime(CLOCK_REALTIME, &end);
+                double d_gr = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
+                tiempos_g[k] = d_gr;
+                //printf("Algoritmo greedy:\nResultado: %d\nTiempo de ejecución: %f\n", gr, d_gr);
+                //printf("\n");
+
+                clock_gettime(CLOCK_REALTIME, &start);
+                int pr = proporcional(c, valor, peso, n);
+                clock_gettime(CLOCK_REALTIME, &end);
+                double d_pr = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
+                tiempos_gp[k] = d_pr;
+                //printf("Algoritmo greedy proporcional:\nResultado: %d\nTiempo de ejecución: %f\n", pr, d_pr);
+                //printf("\n");
+
+                
+                if(pd==gr){
+                    //printf("coincidencia para g\n");
+                    coincidencias_g++;
+                }
+                if(pd==pr){
+                    //printf("coincidencia para gp\n");
+                    coincidencias_gp++;
+                }
+                
+                //printf("%f %f %f\n", d_pd, d_gr, d_pr);
+            }
+            //SACAR LOS PROMEDIOS
+            double total_pd = 0.0, total_g = 0.0, total_gp = 0.0;
+            
+            for(int a=0; a<n; a++){
+                total_pd += tiempos_pd[a];
+                total_g += tiempos_g[a];
+                total_gp += tiempos_gp[a];
+            }
+
+
+            double promedio_pd = total_pd/(double)n;
+            double promedio_g = total_g/(double)n;
+            double promedio_gp = total_gp/(double)n;
+            
+            //printf("\t%f %f %f\n", promedio_pd, promedio_g, promedio_gp);
+            
+            promedios_pd[i][j] = promedio_pd;
+            promedios_g[i][j] = promedio_g;
+            promedios_gp[i][j] = promedio_gp;
+
+            //printf("")
+
         }
-
-        struct timespec start, end, start1, end1;
-
-        clock_gettime(CLOCK_REALTIME, &start);
-        int pd = dinamico(c, valor, peso, n);
-        clock_gettime(CLOCK_REALTIME, &end);
-        double d_pd = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
-        printf("Algoritmo de programación dinámica:\nResultado: %d\nTiempo de ejecución: %f\n", pd, d_pd);
-        printf("\n");
-        
-        clock_gettime(CLOCK_REALTIME, &start);
-        int pr = proporcional(c, valor, peso, n);
-        clock_gettime(CLOCK_REALTIME, &end);
-        double d_pr = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
-        printf("Algoritmo greedy proporcional:\nResultado: %d\nTiempo de ejecución: %f\n", pr, d_pr);
-        printf("\n");
-
-        clock_gettime(CLOCK_REALTIME, &start1);
-        printf("#");
-        int gr = greedy(c, valor, peso, n);
-        clock_gettime(CLOCK_REALTIME, &end1);
-        double d_gr = (end1.tv_sec-start1.tv_sec)+(end1.tv_nsec-start1.tv_nsec)/1000000000.0;
-        printf("Algoritmo greedy:\nResultado: %d\nTiempo de ejecución: %f\n", gr, d_gr);
-        printf("\n");
-
     }
+
+    printf("Tabla PD\n");
+    for(i=0; i<10; i++){
+        for(j=0; j<10; j++){
+            printf("%f  ",promedios_pd[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Tabla Greedy\n");
+    for(i=0; i<10; i++){
+        for(j=0; j<10; j++){
+            printf("%f  ",promedios_g[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Tabla Greedy proporcional\n");
+    for(i=0; i<10; i++){
+        for(j=0; j<10; j++){
+            printf("%f  ",promedios_gp[i][j]);
+        }
+        printf("\n");
+    }
+
+    //printf("Promedio Programación dinámica:\t%f segundos\nPromedio Greedy:\t\t%f segundos\nPromedio greedy proporcional:\t%f segundos\n", promedio_pd, promedio_g, promedio_gp);
+
+    float porcentaje_g  = coincidencias_g/(double)n;
+    float porcentaje_gp  = coincidencias_gp/(double)n; 
+
+    //printf("%d %d\n", coincidencias_g, coincidencias_gp);
+
+    printf("\nCoincidencias de algoritmo greedy con el algoritmo PD: \t\t\t%f %%\nCoincidencias del algoritmo greedy proporcional con el algoritmo PD: \t%f %%\n", porcentaje_g,porcentaje_gp);
 
     return 0;
 
@@ -118,7 +197,8 @@ int main(int argc, char* argv[]){
             char* c = argv[1]+3;
 		    int a = atoi(c);
             //printf("%d\n", a);
-            experimento(a);
+            if (a>0) experimento(a);
+            else printf("Ingrese un número entero mayor que 0");
     }else{
 		printf("Argumentos inválidos\n\tIngrese -X si desea ejecutar el modo de ejemplo\n\tIngrese -E=n si desea ejecutar el modo experimento en 100*n casos\n");
     }
