@@ -5,6 +5,8 @@
 #include "knapsackGREEDY.h"
 #include "knapsackPROPORCIONAL.h"
 #include "knapsackPD.h"
+#include <locale.h>
+#include <time.h>
 
 #define ARRAY_SIZE 10000
 
@@ -115,7 +117,29 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10]){
     printf("resultado final:\n\n");
 
     printf("%s\n", archivo);
+    char name[10] = "output";
+    char fileName[70];
+	char pdfName[70];
 
+    snprintf(fileName, 90, "./%s.tex", name);
+	snprintf(pdfName, 90, "%s.pdf", name);
+    FILE *file;
+
+    file = fopen(fileName, "w");
+	fprintf(file, "%s\n", archivo);
+	fclose(file);
+
+    char pdflatexFile[90];
+	char evinceFile[90];
+
+    snprintf(pdflatexFile, 90, "pdflatex %s", fileName);
+
+	snprintf(evinceFile, 90, "evince -s %s", pdfName);
+    printf("%s\n", pdflatexFile );
+						     
+	system(pdflatexFile);
+						        
+	system(evinceFile);
 }
 
 int ejemplo(){
