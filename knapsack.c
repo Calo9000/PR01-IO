@@ -6,6 +6,94 @@
 #include "knapsackPROPORCIONAL.h"
 #include "knapsackPD.h"
 
+void generarLatex(double pd[10][10], double g[10][10], double gp[10][10]){
+
+    printf("\n\n");
+    // iniciar documento
+    char archivo[900000];
+
+    char inicio[] = "\\documentclass{article}\n\\begin{document}\n\\begin{center}\n";
+
+
+    // GENERAR LAS 3 TABLAS
+    char tablaPD[] = "\\begin{table}\n\\caption{Programacion Dinamica}\n\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\n";
+    char tablaG[] = "\\begin{table}\n\\caption{Algoritmo Greedy}\n\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\n";
+    char tablaGP[] = "\\begin{table}\n\\caption{Algoritmo Greedy Proporcional}\n\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\n";
+
+
+    for(int i = 0; i < 10; i++){
+        int fila = (i+1)*100;
+        char filastr[4];
+        snprintf(filastr, 4, "%d", fila);
+        strcat(tablaPD, "\\hline ");
+        strcat(tablaPD, filastr);
+        strcat(tablaG, "\\hline ");
+        strcat(tablaG, filastr);
+        strcat(tablaGP, "\\hline ");
+        strcat(tablaGP, filastr);
+        
+        for(int j = 0; j < 10;j++){
+            char buffer[9];
+
+            double x = pd[i][j];
+
+            snprintf(buffer, 9, "%f", x);
+            strcat(tablaPD,"&");
+            strcat(tablaPD, buffer);
+
+            //printf("%s", buffer);
+
+            char buffer1[9];
+
+            double y = g[i][j];
+
+            snprintf(buffer1, 9, "%f", y);
+            strcat(tablaG,"&");
+            strcat(tablaG, buffer1);
+            //printf("%s", buffer);
+
+            char buffer2[9];
+
+            double z = gp[i][j];
+
+            snprintf(buffer2, 9, "%f", z);
+            strcat(tablaGP,"&");
+            strcat(tablaGP, buffer2);
+            //printf("%s", buffer);
+
+        }
+        strcat(tablaPD, "\\\\\n");
+        strcat(tablaG, "\\\\\n");
+        strcat(tablaGP, "\\\\\n");
+        
+        
+
+    }
+    strcat(tablaPD, "\\hline\n\\end{tabular}\n\\end{table}\n");
+    strcat(tablaG, "\\hline\n\\end{tabular}\n\\end{table}\n");
+    strcat(tablaGP, "\\hline\n\\end{tabular}\n\\end{table}\n");
+                
+
+    // finalizar documento
+    char final[] = "\\end{center}\n\\end{document}";
+
+    // concatenar todo
+
+    printf("%s\n", tablaPD);
+    printf("%s\n", tablaG);
+    printf("%s\n", tablaGP);
+
+
+    strcat(archivo, inicio);
+    strcat(archivo, tablaPD);
+    strcat(archivo, tablaG);
+    strcat(archivo, tablaGP);
+    printf("hola\n");
+
+    printf("%s\n", archivo);
+
+}
+
 int ejemplo(){
 
 	// cantidad de objetos
@@ -54,8 +142,7 @@ int experimento(int n){
     double promedios_pd[10][10], promedios_g[10][10], promedios_gp[10][10];
 
     int coincidencias_g = 0, coincidencias_gp = 0;
-
-    int contador = 0;
+ 
 
     int i, j, k;
     for(i = 0; i<10; i++){
@@ -178,9 +265,12 @@ int experimento(int n){
 
     printf("\nCoincidencias de algoritmo greedy con el algoritmo PD: \t\t\t%f %%\nCoincidencias del algoritmo greedy proporcional con el algoritmo PD: \t%f %%\n", porcentaje_g,porcentaje_gp);
 
+    generarLatex(promedios_pd, promedios_g, promedios_gp);
+
     return 0;
 
 }
+
 
 int main(int argc, char* argv[]){
 
