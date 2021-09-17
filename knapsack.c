@@ -211,6 +211,7 @@ int ejemplo(){
     printf("Algoritmo greedy proporcional:\nResultado: %d\nTiempo de ejecución: %f\n", pr, d_pr);
     printf("\n");
 
+    dinamicoPrueba(c, valor, peso, n);
     return 0;
 
 }

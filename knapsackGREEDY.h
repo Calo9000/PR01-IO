@@ -36,11 +36,17 @@ void quicksort(int A[], int B[], int low, int high) {
 
 
 // Returns the maximum value that can be put in a knapsack of capacity W
-int greedy(int C, int valor[], int peso[], int n)
+int greedy(int C, int v[], int p[], int n)
 {
     int total = 0;
     int capacidad = C;
     
+    int valor[n];
+    for(int i=0; i<n; i++) valor[i] = v[i];
+
+    int peso[n];
+    for(int i=0; i<n; i++) peso[i] = p[i];
+
     quicksort(valor,peso,0,n-1);
 
     /*

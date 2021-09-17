@@ -37,7 +37,7 @@ void quicksortProporcional(int A[], int B[], int C[], int low, int high) {
 }
 
 // Returns the maximum value that can be put in a knapsack of capacity W
-int proporcional(int C, int valor[], int peso[], int n)
+int proporcional(int C, int v[], int p[], int n)
 {
 
     int total = 0;
@@ -45,12 +45,18 @@ int proporcional(int C, int valor[], int peso[], int n)
     
     int rendimiento[n];
 
+
+    int valor[n];
+    for(int i=0; i<n; i++) valor[i] = v[i];
+
+    int peso[n];
+    for(int i=0; i<n; i++) peso[i] = p[i];
+    
     for(int i=0; i<n; i++){
         //printf("\nHola \n");
         rendimiento[i] = (valor[i])/peso[i];
         //printf("rendimiento %d: %d\n", i, rendimiento[i]);
     }
-
 
     quicksortProporcional(rendimiento,peso,valor,0,n-1);
 
