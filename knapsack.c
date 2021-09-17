@@ -6,20 +6,28 @@
 #include "knapsackPROPORCIONAL.h"
 #include "knapsackPD.h"
 
+#define ARRAY_SIZE 10000
+
 void generarLatex(double pd[10][10], double g[10][10], double gp[10][10]){
 
     printf("\n\n");
     // iniciar documento
-    char archivo[900000];
+    char archivo[ARRAY_SIZE] = "";
 
-    char inicio[] = "\\documentclass{article}\n\\begin{document}\n\\begin{center}\n";
+    char inicio[ARRAY_SIZE] = "\\documentclass{article}\n\\usepackage{textcomp}\n\\usepackage{tabularx}\n\\begin{document}\n\\begin{center}\n";
 
+    // finalizar documento
+    char final[ARRAY_SIZE] = "\\end{center}\n\\end{document}";
 
     // GENERAR LAS 3 TABLAS
-    char tablaPD[] = "\\begin{table}\n\\caption{Programacion Dinamica}\n\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\n";
-    char tablaG[] = "\\begin{table}\n\\caption{Algoritmo Greedy}\n\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\n";
-    char tablaGP[] = "\\begin{table}\n\\caption{Algoritmo Greedy Proporcional}\n\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\n";
+    char tablaPD[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Programacion Dinamica(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
+    char tablaG[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
+    char tablaGP[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy Proporcional(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
 
+    char primera_fila[ARRAY_SIZE] = "\\hline &10&20&30&40&50&60&70&80&90&100\\\\\n";
+    strcat(tablaPD, primera_fila);
+    strcat(tablaG, primera_fila);
+    strcat(tablaGP, primera_fila);
 
     for(int i = 0; i < 10; i++){
         int fila = (i+1)*100;
@@ -35,30 +43,47 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10]){
         for(int j = 0; j < 10;j++){
             char buffer[9];
 
-            double x = pd[i][j];
+            // PASAR DE SEGUNDOS A MICROSEGUNDOS
+            // multiplicar por 1,000,000 (10⁶)
 
-            snprintf(buffer, 9, "%f", x);
+            int x = pd[i][j]*1000000;
+
+            snprintf(buffer, 9, "%d", x);
             strcat(tablaPD,"&");
-            strcat(tablaPD, buffer);
+            if(x==0){
+                strcat(tablaPD, "$<$1");
+            }else{
+                strcat(tablaPD, buffer);
+            }
 
             //printf("%s", buffer);
 
             char buffer1[9];
 
-            double y = g[i][j];
+            //double y = g[i][j];
+            int y = g[i][j]*1000000;
 
-            snprintf(buffer1, 9, "%f", y);
+            snprintf(buffer1, 9, "%d", y);
             strcat(tablaG,"&");
-            strcat(tablaG, buffer1);
+            if(y==0){
+                strcat(tablaG, "$<$1");
+            }else{
+                strcat(tablaG, buffer1);
+            }
             //printf("%s", buffer);
 
             char buffer2[9];
 
-            double z = gp[i][j];
+            //double z = gp[i][j];
+            int z = gp[i][j]*1000000;
 
-            snprintf(buffer2, 9, "%f", z);
+            snprintf(buffer2, 9, "%d", z);
             strcat(tablaGP,"&");
-            strcat(tablaGP, buffer2);
+            if(z==0){
+                strcat(tablaGP, "$<$1");
+            }else{
+                strcat(tablaGP, buffer2);
+            }
             //printf("%s", buffer);
 
         }
@@ -66,29 +91,28 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10]){
         strcat(tablaG, "\\\\\n");
         strcat(tablaGP, "\\\\\n");
         
-        
 
     }
-    strcat(tablaPD, "\\hline\n\\end{tabular}\n\\end{table}\n");
-    strcat(tablaG, "\\hline\n\\end{tabular}\n\\end{table}\n");
-    strcat(tablaGP, "\\hline\n\\end{tabular}\n\\end{table}\n");
+    strcat(tablaPD, "\\hline\n\\end{tabularx}\n\\end{table}\n");
+    strcat(tablaG, "\\hline\n\\end{tabularx}\n\\end{table}\n");
+    strcat(tablaGP, "\\hline\n\\end{tabularx}\n\\end{table}\n");
                 
-
-    // finalizar documento
-    char final[] = "\\end{center}\n\\end{document}";
 
     // concatenar todo
 
+    /*
     printf("%s\n", tablaPD);
     printf("%s\n", tablaG);
     printf("%s\n", tablaGP);
+    */
 
-
+    
     strcat(archivo, inicio);
     strcat(archivo, tablaPD);
     strcat(archivo, tablaG);
     strcat(archivo, tablaGP);
-    printf("hola\n");
+    strcat(archivo, final);
+    printf("resultado final:\n\n");
 
     printf("%s\n", archivo);
 
