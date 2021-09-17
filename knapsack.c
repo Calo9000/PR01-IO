@@ -10,7 +10,7 @@
 
 #define ARRAY_SIZE 10000
 
-void generarLatex(double pd[10][10], double g[10][10], double gp[10][10]){
+void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float p_g[10][10], float p_gp[10][10]){
 
     printf("\n\n");
     // iniciar documento
@@ -25,11 +25,15 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10]){
     char tablaPD[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Programacion Dinamica(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
     char tablaG[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
     char tablaGP[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy Proporcional(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
+    char tablaPG[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy (porcentaje)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
+    char tablaPGP[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy Proporcional(porcentaje)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
 
     char primera_fila[ARRAY_SIZE] = "\\hline &10&20&30&40&50&60&70&80&90&100\\\\\n";
     strcat(tablaPD, primera_fila);
     strcat(tablaG, primera_fila);
     strcat(tablaGP, primera_fila);
+    strcat(tablaPG, primera_fila);
+    strcat(tablaPGP, primera_fila);
 
     for(int i = 0; i < 10; i++){
         int fila = (i+1)*100;
@@ -41,6 +45,10 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10]){
         strcat(tablaG, filastr);
         strcat(tablaGP, "\\hline ");
         strcat(tablaGP, filastr);
+        strcat(tablaPG, "\\hline ");
+        strcat(tablaPG, filastr);
+        strcat(tablaPGP, "\\hline ");
+        strcat(tablaPGP, filastr);
         
         for(int j = 0; j < 10;j++){
             char buffer[9];
@@ -87,17 +95,36 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10]){
                 strcat(tablaGP, buffer2);
             }
             //printf("%s", buffer);
+            char buffer3[9];
+
+            int e = p_g[i][j];
+
+            snprintf(buffer3, 9, "%d", e);
+            strcat(tablaPG,"&");
+            strcat(tablaPG, buffer3);
+            strcat(tablaPG, "\\%");
+
+            e = p_gp[i][j];
+
+            snprintf(buffer3, 9, "%d", e);
+            strcat(tablaPGP,"&");
+            strcat(tablaPGP, buffer3);
+            strcat(tablaPGP, "\\%");
 
         }
         strcat(tablaPD, "\\\\\n");
         strcat(tablaG, "\\\\\n");
         strcat(tablaGP, "\\\\\n");
+        strcat(tablaPG, "\\\\\n");
+        strcat(tablaPGP, "\\\\\n");
         
 
     }
     strcat(tablaPD, "\\hline\n\\end{tabularx}\n\\end{table}\n");
     strcat(tablaG, "\\hline\n\\end{tabularx}\n\\end{table}\n");
     strcat(tablaGP, "\\hline\n\\end{tabularx}\n\\end{table}\n");
+    strcat(tablaPG, "\\hline\n\\end{tabularx}\n\\end{table}\n");
+    strcat(tablaPGP, "\\hline\n\\end{tabularx}\n\\end{table}\n");
                 
 
     // concatenar todo
@@ -113,10 +140,13 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10]){
     strcat(archivo, tablaPD);
     strcat(archivo, tablaG);
     strcat(archivo, tablaGP);
+    strcat(archivo, tablaPG);
+    strcat(archivo, tablaPGP);
     strcat(archivo, final);
     printf("resultado final:\n\n");
 
     printf("%s\n", archivo);
+
     char name[10] = "output";
     char fileName[70];
 	char pdfName[70];
@@ -189,14 +219,15 @@ int experimento(int n){
 
     double promedios_pd[10][10], promedios_g[10][10], promedios_gp[10][10];
 
-    int coincidencias_g = 0, coincidencias_gp = 0;
  
+    float porcentajes_g[10][10], porcentajes_gp[10][10];
 
     int i, j, k;
     for(i = 0; i<10; i++){
         for(j = 0; j<10; j++){
             //printf("%d, %d\n", i, j);
             double tiempos_pd[n], tiempos_g[n], tiempos_gp[n];
+            int coincidencias_g = 0, coincidencias_gp = 0;
             for(k = 0; k<n; k++){
                 //printf("%d\n",i);
 
@@ -255,6 +286,8 @@ int experimento(int n){
                     coincidencias_gp++;
                 }
                 
+                //printf("%d %d\n", coincidencias_g, coincidencias_gp);
+
                 //printf("%f %f %f\n", d_pd, d_gr, d_pr);
             }
             //SACAR LOS PROMEDIOS
@@ -277,6 +310,11 @@ int experimento(int n){
             promedios_g[i][j] = promedio_g;
             promedios_gp[i][j] = promedio_gp;
 
+            //SACAR PORCENTAJES
+
+            porcentajes_g[i][j] = (float) coincidencias_g * 100.0f / (float) n;
+            porcentajes_gp[i][j] = (float) coincidencias_gp * 100.0f / (float) n;
+            
             //printf("")
 
         }
@@ -306,14 +344,12 @@ int experimento(int n){
 
     //printf("Promedio Programación dinámica:\t%f segundos\nPromedio Greedy:\t\t%f segundos\nPromedio greedy proporcional:\t%f segundos\n", promedio_pd, promedio_g, promedio_gp);
 
-    float porcentaje_g  = coincidencias_g/(double)n;
-    float porcentaje_gp  = coincidencias_gp/(double)n; 
+
 
     //printf("%d %d\n", coincidencias_g, coincidencias_gp);
 
-    printf("\nCoincidencias de algoritmo greedy con el algoritmo PD: \t\t\t%f %%\nCoincidencias del algoritmo greedy proporcional con el algoritmo PD: \t%f %%\n", porcentaje_g,porcentaje_gp);
 
-    generarLatex(promedios_pd, promedios_g, promedios_gp);
+    generarLatex(promedios_pd, promedios_g, promedios_gp, porcentajes_g, porcentajes_gp);
 
     return 0;
 
