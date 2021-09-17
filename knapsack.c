@@ -8,48 +8,108 @@
 #include <locale.h>
 #include <time.h>
 
-#define ARRAY_SIZE 10000
+#define ARRAY_SIZE 20000
 
-void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float p_g[10][10], float p_gp[10][10]){
+void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float p_g[10][10], float p_gp[10][10], int n){
 
     printf("\n\n");
     // iniciar documento
     char archivo[ARRAY_SIZE] = "";
 
-    char inicio[ARRAY_SIZE] = "\\documentclass{article}\n\\usepackage{textcomp}\n\\usepackage{tabularx}\n\\begin{document}\n\\begin{center}\n";
+    char inicio[ARRAY_SIZE] = "\\documentclass{article}\n\\usepackage{textcomp}\n\\usepackage{tabularx}\n\\usepackage{fancyhdr}\n\\usepackage{multirow}\n\\usepackage{graphicx}\n\\usepackage{caption}\n\\pagestyle{fancy}\n\\lhead{Resultados de los algoritmos}\n\\rhead{Proyecto 1 IC6400}\n\\begin{document}\n\\section*{Reporte de resultados obtenidos}\nEn el presente documento se muestran los resultados de la ejecución de los algoritmos. Las tablas 1, 2 y 3 corresponden con los algoritmos de programación dinámica, greedy y greedy proporcional respectivamente. En cada casilla se muestra el tiempo de ejecución promedio de ";
+    
+    char entrada[10];    
+    snprintf(entrada, 10, "%d", n);
+    strcat(inicio, entrada);
+
+    strcat(inicio, " escenarios. La cantidad de objetos se muestra en la primera fila y la capacidad de la mochila se muestra en la primera columna. Las tablas muestran los resultados en microsegundos ($10^{-6}$ segundos).\n\\begin{center}\n");
+
+    
 
     // finalizar documento
     char final[ARRAY_SIZE] = "\\end{center}\n\\end{document}";
 
-    // GENERAR LAS 3 TABLAS
+    // GENERAR LAS 5 TABLAS
+    char inicioTabla[ARRAY_SIZE] = "\\begin{table}[ht]\n\\centering\n";
+    
+    char tituloPD[ARRAY_SIZE] = "\\caption*{Tabla 1: Tiempos promedio de ejecución con Programacion Dinamica (\\textmu s)}\n\\label{1}\n";
+    char tituloG[ARRAY_SIZE] = "\\caption*{Tabla 2: Tiempos promedio de ejecución con Algoritmo Greedy (\\textmu s)}\n\\label{2}\n";
+    char tituloGP[ARRAY_SIZE] = "\\caption*{Tabla 3: Tiempos promedio de ejecución con Algoritmo Greedy Proporcional (\\textmu s)}\n\\label{3}\n";
+    char tituloPG[ARRAY_SIZE] = "\\caption*{Tabla 4: Porcentaje de éxitos para el algoritmo Greedy}\n\\label{4}\n";
+    char tituloPGP[ARRAY_SIZE] = "\\caption*{Tabla 5: Porcentaje de éxitos para el algoritmo Greedy Proporcional}\n\\label{5}\n";
+    
+    char inicioTabla2[ARRAY_SIZE] = "\\begin{tabularx}{0.8\\textwidth}{Xr|XXXXXXXXXX}\n&\\multicolumn{10}{c}{Cantidad de objetos} \\\\\n&&10&20&30&40&50&60&70&80&90&100\\\\\\hline\n";
+
+    /*
     char tablaPD[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Programacion Dinamica(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
     char tablaG[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
     char tablaGP[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy Proporcional(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
     char tablaPG[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy (porcentaje)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
     char tablaPGP[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy Proporcional(porcentaje)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
+    */
 
     char primera_fila[ARRAY_SIZE] = "\\hline &10&20&30&40&50&60&70&80&90&100\\\\\n";
+    /*
     strcat(tablaPD, primera_fila);
     strcat(tablaG, primera_fila);
     strcat(tablaGP, primera_fila);
     strcat(tablaPG, primera_fila);
     strcat(tablaPGP, primera_fila);
+    */
+
+    char tablaPD[ARRAY_SIZE] = "";
+    char tablaG[ARRAY_SIZE] = "";
+    char tablaGP[ARRAY_SIZE] = "";
+    char tablaPG[ARRAY_SIZE] = "";
+    char tablaPGP[ARRAY_SIZE] = "";
+
+    strcat(tablaPD, inicioTabla);
+    strcat(tablaPD, tituloPD);
+    strcat(tablaPD, inicioTabla2);
+
+    strcat(tablaG, inicioTabla);
+    strcat(tablaG, tituloG);
+    strcat(tablaG, inicioTabla2);
+
+    strcat(tablaGP, inicioTabla);
+    strcat(tablaGP, tituloGP);
+    strcat(tablaGP, inicioTabla2);
+
+    strcat(tablaPG, inicioTabla);
+    strcat(tablaPG, tituloPG);
+    strcat(tablaPG, inicioTabla2);
+
+    strcat(tablaPGP, inicioTabla);
+    strcat(tablaPGP, tituloPGP);
+    strcat(tablaPGP, inicioTabla2);
 
     for(int i = 0; i < 10; i++){
+        if(i==0){
+            char capacidad[100] = "\\parbox[t]{2mm}{\\multirow{3}{*}{\\rotatebox[origin=r]{90}{Capacidad de la mochila}}}";
+            strcat(tablaPD, capacidad);
+            strcat(tablaG, capacidad);
+            strcat(tablaGP, capacidad);
+            strcat(tablaPG, capacidad);
+            strcat(tablaPGP, capacidad);
+        }
+
         int fila = (i+1)*100;
-        char filastr[4];
-        snprintf(filastr, 4, "%d", fila);
-        strcat(tablaPD, "\\hline ");
+        char flstr[5];
+        snprintf(flstr, 5, "%d", fila);
+        char filastr[10] = "&";
+        strcat(filastr, flstr);
+        //strcat(tablaPD, "\\hline ");
         strcat(tablaPD, filastr);
-        strcat(tablaG, "\\hline ");
+        //strcat(tablaG, "\\hline ");
         strcat(tablaG, filastr);
-        strcat(tablaGP, "\\hline ");
+        //strcat(tablaGP, "\\hline ");
         strcat(tablaGP, filastr);
-        strcat(tablaPG, "\\hline ");
+        //strcat(tablaPG, "\\hline ");
         strcat(tablaPG, filastr);
-        strcat(tablaPGP, "\\hline ");
+        //strcat(tablaPGP, "\\hline ");
         strcat(tablaPGP, filastr);
         
+
         for(int j = 0; j < 10;j++){
             char buffer[9];
 
@@ -120,11 +180,12 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float 
         
 
     }
-    strcat(tablaPD, "\\hline\n\\end{tabularx}\n\\end{table}\n");
-    strcat(tablaG, "\\hline\n\\end{tabularx}\n\\end{table}\n");
-    strcat(tablaGP, "\\hline\n\\end{tabularx}\n\\end{table}\n");
-    strcat(tablaPG, "\\hline\n\\end{tabularx}\n\\end{table}\n");
-    strcat(tablaPGP, "\\hline\n\\end{tabularx}\n\\end{table}\n");
+    char finTabla[ARRAY_SIZE]  = "\\end{tabularx}\n\\end{table}\n";
+    strcat(tablaPD, finTabla);
+    strcat(tablaG, finTabla);
+    strcat(tablaGP, finTabla);
+    strcat(tablaPG, finTabla);
+    strcat(tablaPGP, finTabla);
                 
 
     // concatenar todo
@@ -350,7 +411,7 @@ int experimento(int n){
     //printf("%d %d\n", coincidencias_g, coincidencias_gp);
 
 
-    generarLatex(promedios_pd, promedios_g, promedios_gp, porcentajes_g, porcentajes_gp);
+    generarLatex(promedios_pd, promedios_g, promedios_gp, porcentajes_g, porcentajes_gp, n);
 
     return 0;
 

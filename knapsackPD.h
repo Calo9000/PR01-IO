@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define ARRAY_SIZE 10000
+#define ARRAY_SIZE_PD 10000
 // PROGRAMACION DINAMICA
 
 int max(int a, int b) { 
@@ -54,11 +54,11 @@ void dinamicoPrueba(int W, int val[], int wt[], int n)
     }
     
     // generar latex
-    char archivo[ARRAY_SIZE] = "";
-    char inicio[ARRAY_SIZE] = "\\documentclass{article}\n\\usepackage{textcomp}\n\\usepackage{tabularx}\n\\usepackage[table]{xcolor}\n\\begin{document}\n\\begin{center}\n";
-    char final[ARRAY_SIZE] = "\\end{center}\n\\end{document}";
+    char archivo[ARRAY_SIZE_PD] = "";
+    char inicio[ARRAY_SIZE_PD] = "\\documentclass{article}\n\\usepackage{textcomp}\n\\usepackage{tabularx}\n\\usepackage[table]{xcolor}\n\\begin{document}\n\\begin{center}\n";
+    char final[ARRAY_SIZE_PD] = "\\end{center}\n\\end{document}";
 
-    char formula[ARRAY_SIZE] = "\nSe debe maximizar $$Z = ";
+    char formula[ARRAY_SIZE_PD] = "\nSe debe maximizar $$Z = ";
 
     for(int i = 0; i<n; i++){
         int valor = val[i];
@@ -93,7 +93,7 @@ void dinamicoPrueba(int W, int val[], int wt[], int n)
     strcat(formula, "$$");
 
 
-    char columnas[ARRAY_SIZE] = "{|";
+    char columnas[ARRAY_SIZE_PD] = "{|";
 
     for(int i = 0; i<n+1; i++){
         strcat(columnas, "X");
@@ -102,11 +102,11 @@ void dinamicoPrueba(int W, int val[], int wt[], int n)
 
     strcat(columnas, "|}\n");
 
-    char tablaPD[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Programacion Dinamica}\n\\begin{tabularx}{\\textwidth}";
+    char tablaPD[ARRAY_SIZE_PD] = "\\begin{table}\n\\centering\n\\caption{Programacion Dinamica}\n\\begin{tabularx}{\\textwidth}";
 
     strcat(tablaPD, columnas);
 
-    char primera_fila[ARRAY_SIZE] = "\\hline";
+    char primera_fila[ARRAY_SIZE_PD] = "\\hline";
 
     for(int i = 0; i<n; i++){
         int columna = i+1;
