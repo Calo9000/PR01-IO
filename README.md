@@ -15,17 +15,17 @@ INSTRUCCIONES DE UTILIZACIÓN:
 2) Dentro de la terminal se debe ingresar el comando "make".
 3) Existen varias opciones al momento de iniciar el programa, se puede correr el programa con los siguientes formatos: 
 
-      ./knapsack -X
+      `./knapsack -X`
 
-   - donde la primera ejecución corresponde al modo ejemplo del programa en el cuál se resolverá un solo caso aleatorio
+   - Donde la primera ejecución corresponde al modo ejemplo del programa en el cuál se resolverá un solo caso aleatorio
    con los 3 algoritmos.
 
-      ./knapsack -E=n
+      `./knapsack -E=n`
 
-   - donde n corresponde al número de casos diferentes -tomando 100n casos- que se resolverán con los 3 algoritmos mencionados.
+   - Donde n corresponde al número de casos diferentes -tomando 100n casos- que se resolverán con los 3 algoritmos mencionados.
 
 4) a) Si se ejecuta el primer comando dentro de la terminal, el programa despliegará el siguiente output:
-
+------------
       Ejecutando modo de ejemplo
       Cantidad de objetos: <cantidad de objetos utilizada>
       Capacidad del saco: <capacidad del saco utilizada>
@@ -46,12 +46,13 @@ INSTRUCCIONES DE UTILIZACIÓN:
       Algoritmo greedy proporcional:
       Resultado: <Resultado de Algoritmo Greeedy Proporcional>
       Tiempo de ejecución: <Resultado de su Tiempo de Ejecución>
-
+------------
       *En donde cada valor dentro de <> varía según cada ejecución.*
 
-      Finalmente se despliega una tabla en un PDF con el resultado de la Programación Dinámica,
-      en la cual se muestran de color verde los valores que se incluyen dentro de la solución, y en rojo
-      los valores que no se utilizan en la solución. Seguidamente aparece la forma matemática del problema inicial.
+      Finalmente se despliega una tabla en un PDF con:
+      -La descripción del problema junto con la tabla que contiene los respectivos pesos y valores-
+      
+      -El resultado de la Programación Dinámica en la cual se muestran de color verde los valores que se incluyen dentro de la solución, y en rojo los valores que no se utilizan en la solución. Seguidamente aparece la forma matemática del problema inicial. Y finalmente, el resultado obtenido por el algoritmo y el tiempo de ejecución en segundos.
 
    b) Si se ejecuta el segundo comando dentro de la terminal, el programa despliegara un documento PDF con 5 tablas en donde:
       -La primera tabla corresponde al tiempo promedio de ejecución con la Programación Dinámica
