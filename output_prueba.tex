@@ -14,14 +14,14 @@ Se tienen 6 objetos con valores y pesos diferentes. Se cuenta con una mochila qu
 \centering
 \begin{tabular}{r|rrrrrr}
 & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
-Valor&3&12&7&11&18&4\\
-Peso&1&5&5&3&5&3\\
+Valor&14&12&10&11&8&16\\
+Peso&6&1&7&6&1&7\\
 \end{tabular}
 \end{table}
 \subsection*{II. Algoritmo de Programación dinámica}
 
-Se debe maximizar $$Z = 3x_1+12x_2+7x_3+11x_4+18x_5+4x_6$$ 
-Sujeto a $$1x_1+5x_2+5x_3+3x_4+5x_5+3x_6\leq 15$$
+Se debe maximizar $$Z = 14x_1+12x_2+10x_3+11x_4+8x_5+16x_6$$ 
+Sujeto a $$6x_1+1x_2+7x_3+6x_4+1x_5+7x_6\leq 15$$
 La siguiente tabla muestra la matriz que se generó al ejecutar el algoritmo de programación dinámica.
 \begin{table}[h]
 \centering
@@ -29,55 +29,55 @@ La siguiente tabla muestra la matriz que se generó al ejecutar el algoritmo de 
 \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
 \hline&1&2&3&4&5&6 \\
 \hline 0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0\\
-\hline 1&\cellcolor{green}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3\\
-\hline 2&\cellcolor{green}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3\\
-\hline 3&\cellcolor{green}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{green}11&\cellcolor{red}11&\cellcolor{red}11\\
-\hline 4&\cellcolor{green}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{green}14&\cellcolor{red}14&\cellcolor{red}14\\
-\hline 5&\cellcolor{green}3&\cellcolor{green}12&\cellcolor{red}12&\cellcolor{green}14&\cellcolor{green}18&\cellcolor{red}18\\
-\hline 6&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{red}15&\cellcolor{red}15&\cellcolor{green}21&\cellcolor{red}21\\
-\hline 7&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{red}15&\cellcolor{red}15&\cellcolor{green}21&\cellcolor{red}21\\
-\hline 8&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{red}15&\cellcolor{green}23&\cellcolor{green}29&\cellcolor{red}29\\
-\hline 9&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{red}15&\cellcolor{green}26&\cellcolor{green}32&\cellcolor{red}32\\
-\hline 10&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}19&\cellcolor{green}26&\cellcolor{green}32&\cellcolor{red}32\\
-\hline 11&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}22&\cellcolor{green}26&\cellcolor{green}33&\cellcolor{red}33\\
-\hline 12&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}22&\cellcolor{green}26&\cellcolor{green}33&\cellcolor{green}36\\
-\hline 13&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}22&\cellcolor{green}30&\cellcolor{green}41&\cellcolor{red}41\\
-\hline 14&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}22&\cellcolor{green}33&\cellcolor{green}44&\cellcolor{red}44\\
-\hline 15&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}22&\cellcolor{green}33&\cellcolor{green}44&\cellcolor{red}44\\
+\hline 1&\cellcolor{red}0&\cellcolor{green}12&\cellcolor{red}12&\cellcolor{red}12&\cellcolor{red}12&\cellcolor{red}12\\
+\hline 2&\cellcolor{red}0&\cellcolor{green}12&\cellcolor{red}12&\cellcolor{red}12&\cellcolor{green}20&\cellcolor{red}20\\
+\hline 3&\cellcolor{red}0&\cellcolor{green}12&\cellcolor{red}12&\cellcolor{red}12&\cellcolor{green}20&\cellcolor{red}20\\
+\hline 4&\cellcolor{red}0&\cellcolor{green}12&\cellcolor{red}12&\cellcolor{red}12&\cellcolor{green}20&\cellcolor{red}20\\
+\hline 5&\cellcolor{red}0&\cellcolor{green}12&\cellcolor{red}12&\cellcolor{red}12&\cellcolor{green}20&\cellcolor{red}20\\
+\hline 6&\cellcolor{green}14&\cellcolor{red}14&\cellcolor{red}14&\cellcolor{red}14&\cellcolor{green}20&\cellcolor{red}20\\
+\hline 7&\cellcolor{green}14&\cellcolor{green}26&\cellcolor{red}26&\cellcolor{red}26&\cellcolor{red}26&\cellcolor{red}26\\
+\hline 8&\cellcolor{green}14&\cellcolor{green}26&\cellcolor{red}26&\cellcolor{red}26&\cellcolor{green}34&\cellcolor{red}34\\
+\hline 9&\cellcolor{green}14&\cellcolor{green}26&\cellcolor{red}26&\cellcolor{red}26&\cellcolor{green}34&\cellcolor{green}36\\
+\hline 10&\cellcolor{green}14&\cellcolor{green}26&\cellcolor{red}26&\cellcolor{red}26&\cellcolor{green}34&\cellcolor{green}36\\
+\hline 11&\cellcolor{green}14&\cellcolor{green}26&\cellcolor{red}26&\cellcolor{red}26&\cellcolor{green}34&\cellcolor{green}36\\
+\hline 12&\cellcolor{green}14&\cellcolor{green}26&\cellcolor{red}26&\cellcolor{red}26&\cellcolor{green}34&\cellcolor{green}36\\
+\hline 13&\cellcolor{green}14&\cellcolor{green}26&\cellcolor{red}26&\cellcolor{green}37&\cellcolor{red}37&\cellcolor{red}37\\
+\hline 14&\cellcolor{green}14&\cellcolor{green}26&\cellcolor{green}36&\cellcolor{green}37&\cellcolor{green}45&\cellcolor{red}45\\
+\hline 15&\cellcolor{green}14&\cellcolor{green}26&\cellcolor{green}36&\cellcolor{green}37&\cellcolor{green}45&\cellcolor{green}50\\
 \hline
 \end{tabularx}
 \end{table}
 
-Resultado obtenido por el algoritmo: 44
+Resultado obtenido por el algoritmo: 50
 
-Tiempo de ejecución: 0.000001 segundos.
+Tiempo de ejecución: 0.000002 segundos.
 \subsection*{III. Algoritmo greedy}
 En la siguiente tabla se muestran los datos usados por el algoritmo greedy.
 \begin{table}[h]
 \centering
 \begin{tabular}{r|rrrrrr}
-Valor&18&12&11&7&4&3\\
-Peso&5&5&3&5&3&1\\
-\hline Capacidad Restante&10&5&2&2&2&1\\
+Valor&16&14&12&11&10&8\\
+Peso&7&6&1&6&7&1\\
+\hline Capacidad Restante&8&2&1&1&1&0\\
 \end{tabular}
 \end{table}
 
-Resultado obtenido por el algoritmo: 44
+Resultado obtenido por el algoritmo: 50
 
-Tiempo de ejecución: 0.000001 segundos.
+Tiempo de ejecución: 0.000002 segundos.
 \subsection*{IV. Algoritmo greedy proporcional}
 En la siguiente tabla se muestran los datos usados por el algoritmo greedy proporcional.
 \begin{table}[h]
 \centering
 \begin{tabular}{r|rrrrrr}
-Valor&11&18&3&12&7&4\\
-Peso&3&5&1&5&5&3\\
-Rendimiento&3.7&3.6&3&2.4&1.4&1.3\\
-\hline Capacidad Restante&12&7&6&1&1&1\\
+Valor&12&8&14&16&11&10\\
+Peso&1&1&6&7&6&7\\
+Rendimiento&12&8&2.3&2.3&1.8&1.4\\
+\hline Capacidad Restante&14&13&7&0&0&0\\
 \end{tabular}
 \end{table}
 
-Resultado obtenido por el algoritmo: 44
+Resultado obtenido por el algoritmo: 50
 
-Tiempo de ejecución: 0.000001 segundos.
+Tiempo de ejecución: 0.000002 segundos.
 \end{document}

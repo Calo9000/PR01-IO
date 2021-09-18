@@ -57,6 +57,8 @@ INSTRUCCIONES DE UTILIZACIÓN:
       -El resultado de la Programación Dinámica en la cual se muestran de color verde los valores que se incluyen dentro de la solución, y en rojo los valores que no se utilizan en la solución. Además aparece la forma matemática del problema inicial. Y finalmente, el resultado obtenido por el algoritmo y el tiempo de ejecución en segundos.
 	-El resultado obtenido por medio de cada uno de los algoritmos greedy, acompañado de una tabla que ilustra el proceso por el cual se llegó a esa solución. Finalmente aparece el resultado y el tiempo de ejecución 
 
+	IMPORTANTE: El PDF así como el archivo .tex que se usó para generarlo se guardan en la carpeta del proyecto con el nombre de output.pdf y output.tex respectivamente.
+
 4) b) Si se ejecuta el segundo comando dentro de la terminal, el programa desplegará un documento PDF con 5 tablas en donde:
 ------------
       -La primera tabla corresponde al tiempo promedio de ejecución con la Programación Dinámica
@@ -66,3 +68,5 @@ INSTRUCCIONES DE UTILIZACIÓN:
       -La quinta tabla corresponde al porcentaje de éxitos para el algortimo Greedy Proporcional (Es decir que coincide con la solución óptima)
 
       *En las primeras 3 tablas del documento, los números se presentan en micro segundos.*
+      
+      IMPORTANTE:  El PDF así como el archivo .tex que se usó para generarlo se guardan en la carpeta del proyecto con el nombre de output_prueba.pdf y output_prueba.tex respectivamente.
