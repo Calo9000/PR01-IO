@@ -2,7 +2,6 @@
 ACERCA DEL PROYECTO:
 El proyecto consiste en un programa que presentará 2 opciones de ejecución en las que se resolverá
 el famoso problema de la Mochila (Knapsack) utilizando 3 principales algoritmos:
-
 -Algoritmo de Programación Dinámica
 -Algoritmo Greedy Básico
 -Algoritmo Greedy Proporcional
@@ -47,7 +46,7 @@ INSTRUCCIONES DE UTILIZACIÓN:
       Algoritmo greedy proporcional:
       Resultado: <Resultado de Algoritmo Greeedy Proporcional>
       Tiempo de ejecución: <Resultado de su Tiempo de Ejecución>
-
+------------
       *En donde cada valor dentro de <> varía según cada ejecución.*
 
       Finalmente se despliega una tabla en un PDF con:
@@ -56,7 +55,6 @@ INSTRUCCIONES DE UTILIZACIÓN:
       -El resultado de la Programación Dinámica en la cual se muestran de color verde los valores que se incluyen dentro de la solución, y en rojo los valores que no se utilizan en la solución. Seguidamente aparece la forma matemática del problema inicial. Y finalmente, el resultado obtenido por el algoritmo y el tiempo de ejecución en segundos.
 
    b) Si se ejecuta el segundo comando dentro de la terminal, el programa despliegara un documento PDF con 5 tablas en donde:
-------------
       -La primera tabla corresponde al tiempo promedio de ejecución con la Programación Dinámica
       -La segunda tabla corresponde al tiempo promedio de ejecución con el Algoritmo Greedy
       -La tercera tabla corresponde al tiempo promedio de ejecución con el Algoritmo Greedy Proporcional
