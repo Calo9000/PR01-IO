@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.16)  17 SEP 2021 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.17)  17 SEP 2021 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -85,45 +85,1681 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen143
 \Gin@req@width=\dimen144
 )
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 
-! LaTeX Error: File `caption.sty' not found.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen145
+\captionmargin@=\dimen146
+\captionwidth=\dimen147
+\caption@tempdima=\dimen148
+\caption@indent=\dimen149
+\caption@parindent=\dimen150
+\caption@hangindent=\dimen151
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count176
+\c@continuedfloat=\count177
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count178
+\l__pdf_internal_box=\box47
+)
+(./output.aux)
+\openout1 = `output.aux'.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
-Enter file name: caption.sty
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count179
+\scratchdimen=\dimen152
+\scratchbox=\box48
+\nofMPsegments=\count180
+\nofMParguments=\count181
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count182
+\MPscratchDim=\dimen153
+\MPnumerator=\count183
+\makeMPintoPDFobject=\count184
+\everyMPtoPDFconversion=\toks18
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
 
-! LaTeX Error: File `caption.sty' not found.
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 13.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+Overfull \vbox (77.67796pt too high) detected at line 32
+ []
 
-Enter file name: caption.sty
 
-! LaTeX Error: File `caption.sty' not found.
+Overfull \vbox (77.67796pt too high) detected at line 32
+ []
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
 
-Enter file name: x
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 100| 
+ []
 
- )
-(\end occurred when \ifx on line 8 was incomplete)
-(\end occurred when \ifx on line 8 was incomplete)
-(\end occurred when \ifx on line 8 was incomplete)
-(\end occurred when \ifx on line 8 was incomplete) 
+
+Overfull \vbox (77.67796pt too high) detected at line 32
+ []
+
+
+Overfull \hbox (3.19835pt too wide) in paragraph at lines 32--32
+[][] 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 112| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 114| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 144| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 157| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 172| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 189| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 114| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 146| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 175| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 200| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 238| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 268| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 286| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 116| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 150| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 186| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 235| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 269| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 321| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 348| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 386| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 144| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 191| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 240| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 291| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 335| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 381| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 431| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 495| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 114| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 173| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 243| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 289| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 349| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 400| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 464| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 529| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 566| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 132| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 205| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 281| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 341| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 399| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 478| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 544| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 602| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 672| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 156| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 229| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 301| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 381| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 467| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 548| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 618| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 694| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 770| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 176| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 266| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 354| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 443| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 520| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 604| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 688| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 776| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 865| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 100| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 194| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 291| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 383| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 485| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 579| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 669| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 764| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 872| 
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/10 956| 
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 51
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 51
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 51--51
+[]|\OT1/cmr/m/n/10 100| 
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 51
+ []
+
+
+Overfull \hbox (3.19835pt too wide) in paragraph at lines 51--51
+[][] 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 51--51
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 51--51
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 51--51
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 51--51
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 51--51
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 51--51
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 51--51
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 51--51
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 51--51
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 51--51
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 70
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 70
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 70--70
+[]|\OT1/cmr/m/n/10 100| 
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 70
+ []
+
+
+Overfull \hbox (3.19835pt too wide) in paragraph at lines 70--70
+[][] 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 70--70
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 70--70
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 70--70
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 70--70
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 70--70
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 70--70
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 70--70
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 70--70
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 70--70
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \hbox (2.63226pt too wide) in paragraph at lines 70--70
+[]|$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 1| 
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 89
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 89
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 100| 
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 89
+ []
+
+
+Overfull \hbox (3.19835pt too wide) in paragraph at lines 89--89
+[][] 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 78%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 13%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 3%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 80%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 29%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 7%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 2%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 80%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 29%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 8%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 1%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 81%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 25%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 6%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 2%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 1%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 80%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 25%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 7%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 2%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 81%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 27%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 6%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 2%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 81%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 27%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 6%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 1%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 1%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 81%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 27%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 7%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 2%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 82%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 26%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 7%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 1%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 82%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 26%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 6%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 1%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 108
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 108
+ []
+
+
+Overfull \hbox (4.85449pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 100| 
+ []
+
+
+Overfull \vbox (77.67796pt too high) detected at line 108
+ []
+
+
+Overfull \hbox (3.19835pt too wide) in paragraph at lines 108--108
+[][] 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 12%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 13%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 15%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 12%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 16%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 14%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 12%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 12%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 13%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (8.18784pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 15%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+
+Overfull \hbox (3.18782pt too wide) in paragraph at lines 108--108
+[]|\OT1/cmr/m/n/10 0%| 
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+] [2] (./output.aux) ) 
 Here is how much of TeX's memory you used:
- 881 strings out of 483183
- 10912 string characters out of 5966292
- 239970 words of memory out of 5000000
- 15954 multiletter control sequences out of 15000+600000
- 532338 words of font info for 24 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 30i,1n,45p,205b,36s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-No pages of output.
+ 2516 strings out of 483121
+ 40021 string characters out of 5964354
+ 347048 words of memory out of 5000000
+ 17565 multiletter control sequences out of 15000+600000
+ 533278 words of font info for 27 fonts, out of 8000000 for 9000
+ 40 hyphenation exceptions out of 8191
+ 41i,14n,45p,514b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/calo/.texlive2019/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on output.pdf (2 pages, 53995 bytes).
 PDF statistics:
- 0 PDF objects out of 1000 (max. 8388607)
+ 36 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

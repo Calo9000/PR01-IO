@@ -1,15 +1,31 @@
 \documentclass{article}
 \usepackage{textcomp}
 \usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\pagestyle{fancy}
+\lhead{Modo ejemplo}
+\rhead{Proyecto 1 IC6400}
 \usepackage[table]{xcolor}
 \begin{document}
-\begin{center}
+\section*{Resultados del modo de ejemplo}
+\subsection*{I. Descripción del problema}
+Se tienen 6 objetos con valores y pesos diferentes. Se cuenta con una mochila que solamente es capaz de soportar un peso de 15. Se debe buscar la manera óptima de escoger los objetos que se llevarán en la mochila. Los datos de cada uno de los objetos se muestran en la siguiente tabla:\begin{table}[h]
+\centering
+\begin{tabular}{r|rrrrrr}
+& 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+Valor&4&18&14&7&10&3\\
+Peso&5&6&4&3&4&6\\
+\end{tabular}
+\end{table}
+\subsection*{II. Algoritmo de Programación dinámica}
 
 Se debe maximizar $$Z = 4x_1+18x_2+14x_3+7x_4+10x_5+3x_6$$ 
-Sujeto a $$
-5x_1+6x_2+4x_3+3x_4+4x_5+6x_6\leq 15$$\begin{table}
+Sujeto a $$5x_1+6x_2+4x_3+3x_4+4x_5+6x_6\leq 15$$
+La siguiente tabla muestra la matriz que se generó al ejecutar el algoritmo de programación dinámica.
+\begin{table}[h]
 \centering
-\caption{Programacion Dinamica}
+\caption*{Tabla 2: Matriz resultante del algoritmo de programación dinámica}
 \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
 \hline&1&2&3&4&5&6 \\
 \hline 0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0\\
@@ -30,5 +46,37 @@ Sujeto a $$
 \hline
 \end{tabularx}
 \end{table}
-\end{center}
+
+Resultado obtenido por el algoritmo: 42
+
+Tiempo de ejecución: 0.000002 segundos.
+\subsection*{III. Algoritmo greedy}
+En la siguiente tabla se muestran los datos usados por el algoritmo greedy.
+\begin{table}[h]
+\centering
+\begin{tabular}{r|rrrrrr}
+Valor&18&14&10&7&4&3\\
+Peso&6&4&4&3&5&6\\
+\hline Capacidad Restante&9&5&1&1&1&1\\
+\end{tabular}
+\end{table}
+
+Resultado obtenido por el algoritmo: 42
+
+Tiempo de ejecución: 0.000001 segundos.
+\subsection*{IV. Algoritmo greedy proporcional}
+En la siguiente tabla se muestran los datos usados por el algoritmo greedy proporcional.
+\begin{table}[h]
+\centering
+\begin{tabular}{r|rrrrrr}
+Valor&14&18&10&7&4&3\\
+Peso&4&6&4&3&5&6\\
+Rendimiento&3.5&3&2.5&2.3&0.8&0.5\\
+\hline Capacidad Restante&11&5&1&1&1&1\\
+\end{tabular}
+\end{table}
+
+Resultado obtenido por el algoritmo: 42
+
+Tiempo de ejecución: 0.000001 segundos.
 \end{document}

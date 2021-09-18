@@ -5,8 +5,8 @@
 #include "knapsackGREEDY.h"
 #include "knapsackPROPORCIONAL.h"
 #include "knapsackPD.h"
+#include "prueba.h"
 #include <locale.h>
-#include <time.h>
 
 #define ARRAY_SIZE 20000
 
@@ -272,7 +272,7 @@ int ejemplo(){
     printf("Algoritmo greedy proporcional:\nResultado: %d\nTiempo de ejecución: %f\n", pr, d_pr);
     printf("\n");
 
-    dinamicoPrueba(c, valor, peso, n);
+    prueba(c, valor, peso, n);
     return 0;
 
 }

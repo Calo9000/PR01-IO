@@ -10,7 +10,7 @@
 \rhead{Proyecto 1 IC6400}
 \begin{document}
 \section*{Reporte de resultados obtenidos}
-En el presente documento se muestran los resultados de la ejecución de los algoritmos. Las tablas 1, 2 y 3 corresponden con los algoritmos de programación dinámica, greedy y greedy proporcional respectivamente. En cada casilla se muestra el tiempo de ejecución promedio de 10 escenarios. La cantidad de objetos se muestra en la primera fila y la capacidad de la mochila se muestra en la primera columna. Las tablas muestran los resultados en microsegundos ($10^{-6}$ segundos).
+En el presente documento se muestran los resultados de la ejecución de los algoritmos. Las tablas 1, 2 y 3 corresponden con los algoritmos de programación dinámica, greedy y greedy proporcional respectivamente. En cada casilla se muestra el tiempo de ejecución promedio de 1000 escenarios. La cantidad de objetos se muestra en la primera fila y la capacidad de la mochila se muestra en la primera columna. Las tablas muestran los resultados en microsegundos ($10^{-6}$ segundos).
 \begin{center}
 \begin{table}[ht]
 \centering
@@ -19,16 +19,16 @@ En el presente documento se muestran los resultados de la ejecución de los algo
 \begin{tabularx}{0.8\textwidth}{Xr|XXXXXXXXXX}
 &\multicolumn{10}{c}{Cantidad de objetos} \\
 &&10&20&30&40&50&60&70&80&90&100\\\hline
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&28&58&80&106&75&44&51&61&67&72\\
-&200&14&29&43&57&72&89&101&116&129&143\\
-&300&22&43&64&85&111&129&149&170&191&213\\
-&400&29&57&86&113&142&169&197&226&255&283\\
-&500&36&71&106&142&178&213&247&282&318&353\\
-&600&43&86&128&170&214&257&296&337&381&424\\
-&700&51&101&149&197&249&297&344&394&444&495\\
-&800&58&114&170&226&282&337&394&450&507&561\\
-&900&66&128&191&253&318&381&443&507&568&635\\
-&1000&73&143&213&284&352&424&490&563&635&703\\
+\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&10&20&29&38&48&57&66&77&86&99\\
+&200&20&38&59&86&112&114&144&157&172&189\\
+&300&29&59&88&114&146&175&200&238&268&286\\
+&400&38&77&116&150&186&235&269&321&348&386\\
+&500&48&94&144&191&240&291&335&381&431&495\\
+&600&59&114&173&243&289&349&400&464&529&566\\
+&700&67&132&205&281&341&399&478&544&602&672\\
+&800&77&156&229&301&381&467&548&618&694&770\\
+&900&89&176&266&354&443&520&604&688&776&865\\
+&1000&100&194&291&383&485&579&669&764&872&956\\
 \end{tabularx}
 \end{table}
 \begin{table}[ht]
@@ -38,16 +38,16 @@ En el presente documento se muestran los resultados de la ejecución de los algo
 \begin{tabularx}{0.8\textwidth}{Xr|XXXXXXXXXX}
 &\multicolumn{10}{c}{Cantidad de objetos} \\
 &&10&20&30&40&50&60&70&80&90&100\\\hline
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&2&5&8&11&7&4&5&6&7&8\\
-&200&$<$1&1&2&2&3&4&5&6&7&8\\
+\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&$<$1&1&2&2&3&4&5&6&7&8\\
+&200&$<$1&1&2&3&4&5&5&6&7&8\\
 &300&$<$1&1&2&2&3&4&5&6&7&8\\
-&400&$<$1&1&2&3&3&4&5&6&7&8\\
-&500&$<$1&1&2&3&3&4&5&6&7&8\\
-&600&$<$1&1&2&2&3&4&5&6&7&8\\
+&400&$<$1&1&2&2&3&4&5&6&7&8\\
+&500&$<$1&1&2&2&3&4&5&6&7&8\\
+&600&$<$1&1&2&3&3&4&5&6&7&8\\
 &700&$<$1&1&2&3&3&4&5&6&7&8\\
 &800&$<$1&1&2&3&3&4&5&6&7&8\\
 &900&$<$1&1&2&3&3&4&5&6&7&8\\
-&1000&$<$1&1&2&3&3&4&5&6&7&8\\
+&1000&$<$1&1&2&2&3&4&5&6&7&8\\
 \end{tabularx}
 \end{table}
 \begin{table}[ht]
@@ -57,16 +57,16 @@ En el presente documento se muestran los resultados de la ejecución de los algo
 \begin{tabularx}{0.8\textwidth}{Xr|XXXXXXXXXX}
 &\multicolumn{10}{c}{Cantidad de objetos} \\
 &&10&20&30&40&50&60&70&80&90&100\\\hline
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&2&5&11&11&9&4&5&6&7&8\\
-&200&$<$1&1&2&2&3&4&5&6&7&8\\
-&300&$<$1&1&2&2&3&4&5&7&8&9\\
-&400&$<$1&1&2&2&3&4&6&7&8&10\\
-&500&$<$1&1&2&2&4&5&6&7&9&10\\
-&600&$<$1&1&2&2&4&5&6&8&9&11\\
-&700&$<$1&1&2&2&4&5&6&7&9&11\\
-&800&$<$1&1&2&3&4&5&6&8&9&12\\
-&900&$<$1&1&2&3&4&5&6&8&10&12\\
-&1000&$<$1&1&2&2&4&5&7&8&10&12\\
+\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&$<$1&1&2&3&5&7&9&11&14&17\\
+&200&$<$1&1&2&4&5&7&9&24&14&17\\
+&300&$<$1&1&2&3&5&7&9&12&15&17\\
+&400&$<$1&1&2&3&5&8&9&12&14&18\\
+&500&$<$1&1&2&4&5&7&9&11&14&17\\
+&600&$<$1&1&2&4&6&7&9&11&15&18\\
+&700&$<$1&1&2&4&5&7&9&12&14&17\\
+&800&$<$1&1&2&3&5&7&9&12&20&17\\
+&900&$<$1&1&2&4&5&7&10&12&14&18\\
+&1000&$<$1&1&2&3&5&7&9&11&15&17\\
 \end{tabularx}
 \end{table}
 \begin{table}[ht]
@@ -76,16 +76,16 @@ En el presente documento se muestran los resultados de la ejecución de los algo
 \begin{tabularx}{0.8\textwidth}{Xr|XXXXXXXXXX}
 &\multicolumn{10}{c}{Cantidad de objetos} \\
 &&10&20&30&40&50&60&70&80&90&100\\\hline
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&30\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&200&20\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&300&40\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&400&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&500&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&600&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&700&10\%&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&800&40\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&900&30\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&1000&20\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&78\%&13\%&3\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&200&80\%&29\%&7\%&2\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&300&80\%&29\%&8\%&1\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&400&81\%&25\%&6\%&2\%&1\%&0\%&0\%&0\%&0\%&0\%\\
+&500&80\%&25\%&7\%&2\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&600&81\%&27\%&6\%&2\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&700&81\%&27\%&6\%&1\%&1\%&0\%&0\%&0\%&0\%&0\%\\
+&800&81\%&27\%&7\%&2\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&900&82\%&26\%&7\%&1\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&1000&82\%&26\%&6\%&1\%&0\%&0\%&0\%&0\%&0\%&0\%\\
 \end{tabularx}
 \end{table}
 \begin{table}[ht]
@@ -95,16 +95,16 @@ En el presente documento se muestran los resultados de la ejecución de los algo
 \begin{tabularx}{0.8\textwidth}{Xr|XXXXXXXXXX}
 &\multicolumn{10}{c}{Cantidad de objetos} \\
 &&10&20&30&40&50&60&70&80&90&100\\\hline
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&50\%&10\%&20\%&0\%&0\%&0\%&0\%&0\%&10\%&0\%\\
-&200&20\%&0\%&10\%&20\%&20\%&0\%&10\%&0\%&0\%&10\%\\
-&300&40\%&0\%&0\%&0\%&0\%&20\%&0\%&0\%&20\%&0\%\\
-&400&0\%&0\%&10\%&0\%&10\%&0\%&0\%&0\%&0\%&0\%\\
-&500&10\%&0\%&0\%&10\%&0\%&10\%&10\%&0\%&10\%&10\%\\
-&600&0\%&10\%&0\%&0\%&0\%&0\%&20\%&30\%&20\%&10\%\\
-&700&10\%&0\%&0\%&0\%&0\%&0\%&10\%&0\%&0\%&10\%\\
-&800&20\%&0\%&0\%&10\%&0\%&0\%&10\%&0\%&0\%&0\%\\
-&900&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&1000&20\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&12\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&200&13\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&300&15\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&400&12\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&500&16\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&600&14\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&700&12\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&800&12\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&900&13\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&1000&15\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
 \end{tabularx}
 \end{table}
 \end{center}

@@ -24,6 +24,12 @@ int partitionProporcional(int A[], int B[], int C[], int low, int high) {
     int temp = A[i+1];
     A[i+1] = A[high];
     A[high] = temp;
+    int Btemp = B[i+1];
+    B[i+1] = B[high];
+    B[high] = Btemp;
+    int Ctemp = C[i+1];
+    C[i+1] = C[high];
+    C[high] = Ctemp;
     return (i+1);
 }
 
@@ -53,28 +59,11 @@ int proporcional(int C, int v[], int p[], int n)
     for(int i=0; i<n; i++) peso[i] = p[i];
     
     for(int i=0; i<n; i++){
-        //printf("\nHola \n");
-        rendimiento[i] = (valor[i])/peso[i];
-        //printf("rendimiento %d: %d\n", i, rendimiento[i]);
+        float x = ((float)valor[i]/(float)valor[i])*100.0f;
+        rendimiento[i] = x;
     }
 
     quicksortProporcional(rendimiento,peso,valor,0,n-1);
-
-
-    /*
-    printf("\nLista Ordenada \n");
-    for (int i=0; i<n; i++) {
-        printf("%d",rendimiento[i]);
-        if(i<n-1)
-            printf(",");
-    }
-    printf("\n");
-    for (int i=0; i<n; i++) {
-        printf("%d",valor[i]);
-        if(i<n-1)
-            printf(",");
-    }
-    */
     
     for (int i = 0; i<n; i++){
         if(peso[i]>=capacidad) continue;

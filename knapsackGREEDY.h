@@ -21,6 +21,10 @@ int partition(int A[], int B[], int low, int high) {
     int temp = A[i+1];
     A[i+1] = A[high];
     A[high] = temp;
+    int Btemp = B[i+1];
+    B[i+1] = B[high];
+    B[high] = Btemp;
+    
     return (i+1);
 }
 
@@ -35,7 +39,6 @@ void quicksort(int A[], int B[], int low, int high) {
 
 
 
-// Returns the maximum value that can be put in a knapsack of capacity W
 int greedy(int C, int v[], int p[], int n)
 {
     int total = 0;
