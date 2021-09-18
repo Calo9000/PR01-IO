@@ -5,22 +5,22 @@
 #define ARRAY_SIZE_P 10000
 
 
-void prueba(int W, int val[], int wt[], int n){
+void prueba(int c, int valores[], int pesos[], int n){
     struct timespec start, end;
     clock_gettime(CLOCK_REALTIME, &start);
     int i, w;
-    int K[n+1][W+1];
+    int K[n+1][c+1];
 
     // prueba de programacion dinamica
     // construir la matriz
     for (i = 0; i <= n; i++)
     {
-       for (w = 0; w <= W; w++)
+       for (w = 0; w <= c; w++)
        {
            if (i==0 || w==0)
                 K[i][w] = 0;
-           else if (wt[i-1] <= w)
-                K[i][w] = max(val[i-1] + K[i-1][w-wt[i-1]],  K[i-1][w]);
+           else if (pesos[i-1] <= w)
+                K[i][w] = max(valores[i-1] + K[i-1][w-pesos[i-1]],  K[i-1][w]);
            else
                 K[i][w] = K[i-1][w];
             //printf("%d ", K[i][w]);
@@ -37,7 +37,7 @@ void prueba(int W, int val[], int wt[], int n){
     char tablaInicio[ARRAY_SIZE_P] = "\\begin{table}[h]\n\\centering\n\\begin{tabular}{r|rrrrrr}\n& 1 & 2 & 3 & 4 & 5 & 6 \\\\ \\hline\nValor";
     
     for(int i = 0; i<6; i++){
-        int valor = val[i];
+        int valor = valores[i];
         char valorstr[4];
         snprintf(valorstr, 4, "%d", valor);
         strcat(tablaInicio, "&");
@@ -45,7 +45,7 @@ void prueba(int W, int val[], int wt[], int n){
     }
     strcat(tablaInicio, "\\\\\nPeso");
     for(int i = 0; i<6; i++){
-        int peso = wt[i];
+        int peso = pesos[i];
         char pesostr[4];
         snprintf(pesostr, 4, "%d", peso);
         strcat(tablaInicio, "&");
@@ -59,7 +59,7 @@ void prueba(int W, int val[], int wt[], int n){
     char formula[ARRAY_SIZE_P] = "\\subsection*{II. Algoritmo de Programación dinámica}\n\nSe debe maximizar $$Z = ";
 
     for(int i = 0; i<n; i++){
-        int valor = val[i];
+        int valor = valores[i];
         char valorstr[4];
         char numerostr[4];
         snprintf(valorstr, 4, "%d", valor);
@@ -73,7 +73,7 @@ void prueba(int W, int val[], int wt[], int n){
     strcat(formula, "$$ \nSujeto a $$");
 
     for(int i = 0; i<n; i++){
-        int peso = wt[i];
+        int peso = pesos[i];
         char pesostr[4];
         char numerostr[4];
         snprintf(pesostr, 4, "%d", peso);
@@ -86,7 +86,7 @@ void prueba(int W, int val[], int wt[], int n){
 
     strcat(formula, "\\leq ");
     char capacidadstr[4];
-    snprintf(capacidadstr, 4, "%d", W);
+    snprintf(capacidadstr, 4, "%d", c);
     strcat(formula, capacidadstr);
     strcat(formula, "$$\nLa siguiente tabla muestra la matriz que se generó al ejecutar el algoritmo de programación dinámica.\n");
 
@@ -117,7 +117,7 @@ void prueba(int W, int val[], int wt[], int n){
 
     strcat(tablaPD, primera_fila);
 
-    for(int i = 0; i < W; i++){
+    for(int i = 0; i < c; i++){
         int fila = i;
         char filastr[4];
         snprintf(filastr, 4, "%d", fila);
@@ -177,13 +177,13 @@ void prueba(int W, int val[], int wt[], int n){
    // greedy
     clock_gettime(CLOCK_REALTIME, &start);
     int totalG = 0;
-    int capacidad = W;
+    int capacidad = c;
     
     int valorG[n];
-    for(int i=0; i<n; i++) valorG[i] = val[i];
+    for(int i=0; i<n; i++) valorG[i] = valores[i];
 
     int pesoG[n];
-    for(int i=0; i<n; i++) pesoG[i] = wt[i];
+    for(int i=0; i<n; i++) pesoG[i] = pesos[i];
 
     int capacidadG[n];
 
@@ -257,16 +257,16 @@ void prueba(int W, int val[], int wt[], int n){
     clock_gettime(CLOCK_REALTIME, &start);
 
     int totalGP = 0;
-    capacidad = W;
+    capacidad = c;
     
     int rendimiento[n];
     int capacidadGP[n];
 
     int valorGP[n];
-    for(int i=0; i<n; i++) valorGP[i] = val[i];
+    for(int i=0; i<n; i++) valorGP[i] = valores[i];
 
     int pesoGP[n];
-    for(int i=0; i<n; i++) pesoGP[i] = wt[i];
+    for(int i=0; i<n; i++) pesoGP[i] = pesos[i];
     
     for(int i=0; i<n; i++){
         float x = ((float)valorGP[i]/(float)pesoGP[i])*1000.0f;

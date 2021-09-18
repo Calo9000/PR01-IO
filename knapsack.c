@@ -22,7 +22,7 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float 
     snprintf(entrada, 10, "%d", n);
     strcat(inicio, entrada);
 
-    strcat(inicio, " escenarios. La cantidad de objetos se muestra en la primera fila y la capacidad de la mochila se muestra en la primera columna. Las tablas muestran los resultados en microsegundos ($10^{-6}$ segundos).\n\\begin{center}\n");
+    strcat(inicio, " escenarios. La cantidad de objetos se muestra en la primera fila y la capacidad de la mochila se muestra en la primera columna. Las tablas muestran los resultados en microsegundos ($10^{-6}$ segundos).\nEn las tablas 4 y 5 se muestra el porcentaje de veces que los algoritmos greedy tuvieron un resultado que coincide con la solución óptima en cada uno de los escenarios.\n\\begin{center}\n");
 
     
 
@@ -423,20 +423,21 @@ int main(int argc, char* argv[]){
     //printf("%s\n",argv[1]);
 
     if(argc != 2){
-		printf("Argumentos inválidos\n\tIngrese -X si desea ejecutar el modo de ejemplo\n\tIngrese -E=n si desea ejecutar el modo experimento en 100*n casos\n");
+		printf("Argumentos inválidos\n\tIngrese -X si desea ejecutar el modo de ejemplo\n\tIngrese -E=n si desea ejecutar el modo experimento, donde n es un número entero mayor que 0\n");
 		exit(0);
 	}else if(strcmp(argv[1], "-X")==0){
             printf("Ejecutando modo de ejemplo\n");
             ejemplo();
     }else if(argv[1][0]=='-' && argv[1][1]=='E' && argv[1][2]=='='){
-            printf("Ejecutando modo de experimento\n");
             char* c = argv[1]+3;
 		    int a = atoi(c);
             //printf("%d\n", a);
-            if (a>0) experimento(a);
-            else printf("Ingrese un número entero mayor que 0");
+            if (a>0) {
+                experimento(a);
+                printf("Ejecutando modo de experimento\n");
+            } else printf("Ingrese un número entero mayor que 0\n");
     }else{
-		printf("Argumentos inválidos\n\tIngrese -X si desea ejecutar el modo de ejemplo\n\tIngrese -E=n si desea ejecutar el modo experimento en 100*n casos\n");
+		printf("Argumentos inválidos\n\tIngrese -X si desea ejecutar el modo de ejemplo\n\tIngrese -E=n si desea ejecutar el modo experimento, donde n es un número entero mayor que 0\n");
     }
 	
     return 0;
