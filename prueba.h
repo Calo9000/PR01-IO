@@ -11,7 +11,6 @@ void prueba(int c, int valores[], int pesos[], int n){
     int i, w;
     int K[n+1][c+1];
 
-    // prueba de programacion dinamica
     // construir la matriz
     for (i = 0; i <= n; i++)
     {
@@ -23,9 +22,7 @@ void prueba(int c, int valores[], int pesos[], int n){
                 K[i][w] = max(valores[i-1] + K[i-1][w-pesos[i-1]],  K[i-1][w]);
            else
                 K[i][w] = K[i-1][w];
-            //printf("%d ", K[i][w]);
        }
-       //printf("\n");
     }
     clock_gettime(CLOCK_REALTIME, &end);
     double tiempo_pd = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
@@ -117,7 +114,7 @@ void prueba(int c, int valores[], int pesos[], int n){
 
     strcat(tablaPD, primera_fila);
 
-    for(int i = 0; i < c; i++){
+    for(int i = 0; i < c+1; i++){
         int fila = i;
         char filastr[4];
         snprintf(filastr, 4, "%d", fila);
@@ -129,7 +126,8 @@ void prueba(int c, int valores[], int pesos[], int n){
             char buffer[100];
 
 
-            int x = K[j][i];
+            int x = K[j+1][i];
+            printf("\t%d ", x);
 
             snprintf(buffer, 100, "%d", x);
             strcat(tablaPD,"&");
@@ -140,19 +138,19 @@ void prueba(int c, int valores[], int pesos[], int n){
             } else if (j==0 && x == 0){
                 //rojo
                 strcat(tablaPD,"\\cellcolor{red}");
-            } else if(K[j-1][i] == x){
+            } else if(K[j][i] == x){
                 //rojo
                 strcat(tablaPD,"\\cellcolor{red}");
-            } else if(K[j-1][i] != x){
+            } else if(K[j][i] != x){
                 //verde
                 strcat(tablaPD,"\\cellcolor{green}");
             }
             strcat(tablaPD, buffer);
 
             memset(buffer,0,sizeof(buffer));
-            //printf("%s", buffer);
             
         }
+        printf("\n");
         strcat(tablaPD, "\\\\\n");
         
 
@@ -191,7 +189,7 @@ void prueba(int c, int valores[], int pesos[], int n){
     quicksort(valorG,pesoG,0,n-1);
 
     for (int i = 0; i<n; i++){
-        if(pesoG[i]>=capacidad){
+        if(pesoG[i]>capacidad){
             capacidadG[i] = capacidad;
             continue;
         }else{
@@ -276,7 +274,7 @@ void prueba(int c, int valores[], int pesos[], int n){
     quicksortProporcional(rendimiento,pesoGP,valorGP,0,n-1);
     
     for (int i = 0; i<n; i++){
-        if(pesoGP[i]>=capacidad) {
+        if(pesoGP[i]>capacidad) {
             capacidadGP[i] = capacidad;
             continue;
         }else{
@@ -353,9 +351,7 @@ void prueba(int c, int valores[], int pesos[], int n){
     strcat(archivo, greedy);
     strcat(archivo, proporcional);
     strcat(archivo, final);
-    printf("resultado final:\n\n");
 
-    printf("%s\n", archivo);
 
     char name[15] = "output_prueba";
     char fileName[70];
@@ -375,7 +371,6 @@ void prueba(int c, int valores[], int pesos[], int n){
     snprintf(pdflatexFile, 90, "pdflatex %s", fileName);
 
 	snprintf(evinceFile, 90, "evince -s %s", pdfName);
-    printf("%s\n", pdflatexFile );
 						     
 	system(pdflatexFile);
 						        

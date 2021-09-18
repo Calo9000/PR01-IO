@@ -12,7 +12,6 @@
 
 void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float p_g[10][10], float p_gp[10][10], int n){
 
-    printf("\n\n");
     // iniciar documento
     char archivo[ARRAY_SIZE] = "";
 
@@ -40,22 +39,6 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float 
     
     char inicioTabla2[ARRAY_SIZE] = "\\begin{tabularx}{0.8\\textwidth}{Xr|XXXXXXXXXX}\n&\\multicolumn{10}{c}{Cantidad de objetos} \\\\\n&&10&20&30&40&50&60&70&80&90&100\\\\\\hline\n";
 
-    /*
-    char tablaPD[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Programacion Dinamica(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
-    char tablaG[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
-    char tablaGP[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy Proporcional(\\textmu s)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
-    char tablaPG[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy (porcentaje)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
-    char tablaPGP[ARRAY_SIZE] = "\\begin{table}\n\\centering\n\\caption{Algoritmo Greedy Proporcional(porcentaje)}\n\\begin{tabularx}{0.8\\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}\n";
-    */
-
-    char primera_fila[ARRAY_SIZE] = "\\hline &10&20&30&40&50&60&70&80&90&100\\\\\n";
-    /*
-    strcat(tablaPD, primera_fila);
-    strcat(tablaG, primera_fila);
-    strcat(tablaGP, primera_fila);
-    strcat(tablaPG, primera_fila);
-    strcat(tablaPGP, primera_fila);
-    */
 
     char tablaPD[ARRAY_SIZE] = "";
     char tablaG[ARRAY_SIZE] = "";
@@ -98,15 +81,10 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float 
         snprintf(flstr, 5, "%d", fila);
         char filastr[10] = "&";
         strcat(filastr, flstr);
-        //strcat(tablaPD, "\\hline ");
         strcat(tablaPD, filastr);
-        //strcat(tablaG, "\\hline ");
         strcat(tablaG, filastr);
-        //strcat(tablaGP, "\\hline ");
         strcat(tablaGP, filastr);
-        //strcat(tablaPG, "\\hline ");
         strcat(tablaPG, filastr);
-        //strcat(tablaPGP, "\\hline ");
         strcat(tablaPGP, filastr);
         
 
@@ -126,11 +104,9 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float 
                 strcat(tablaPD, buffer);
             }
 
-            //printf("%s", buffer);
 
             char buffer1[9];
 
-            //double y = g[i][j];
             int y = g[i][j]*1000000;
 
             snprintf(buffer1, 9, "%d", y);
@@ -140,11 +116,9 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float 
             }else{
                 strcat(tablaG, buffer1);
             }
-            //printf("%s", buffer);
 
             char buffer2[9];
 
-            //double z = gp[i][j];
             int z = gp[i][j]*1000000;
 
             snprintf(buffer2, 9, "%d", z);
@@ -154,7 +128,6 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float 
             }else{
                 strcat(tablaGP, buffer2);
             }
-            //printf("%s", buffer);
             char buffer3[9];
 
             int e = p_g[i][j];
@@ -189,13 +162,6 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float 
                 
 
     // concatenar todo
-
-    /*
-    printf("%s\n", tablaPD);
-    printf("%s\n", tablaG);
-    printf("%s\n", tablaGP);
-    */
-
     
     strcat(archivo, inicio);
     strcat(archivo, tablaPD);
@@ -204,9 +170,6 @@ void generarLatex(double pd[10][10], double g[10][10], double gp[10][10], float 
     strcat(archivo, tablaPG);
     strcat(archivo, tablaPGP);
     strcat(archivo, final);
-    printf("resultado final:\n\n");
-
-    printf("%s\n", archivo);
 
     char name[10] = "output";
     char fileName[70];
@@ -287,19 +250,15 @@ int experimento(int n){
     int i, j, k;
     for(i = 0; i<10; i++){
         for(j = 0; j<10; j++){
-            //printf("%d, %d\n", i, j);
             double tiempos_pd[n], tiempos_g[n], tiempos_gp[n];
             int coincidencias_g = 0, coincidencias_gp = 0;
             for(k = 0; k<n; k++){
-                //printf("%d\n",i);
 
                 // cantidad de objetos
                 int n = (j+1)*10;
-                //printf("Cantidad de objetos: %d\n",n);
 
                 // capacidad del saco
                 int  c = (i+1)*100;
-                //printf("Capacidad del saco: %d\n",c);
 
                 int valor[n];
                 int peso[n];
@@ -308,7 +267,6 @@ int experimento(int n){
                     valor[a] = rand() % 100 + 1;
                     // peso de los objetos
                     peso[a] = rand() % 4*c/10 + 1;
-                    //printf("Objeto %d-> Valor: %d, Peso: %d\n", i, valor[i], peso[i]);
                 }
 
                 struct timespec start, end;
@@ -318,39 +276,27 @@ int experimento(int n){
                 clock_gettime(CLOCK_REALTIME, &end);
                 double d_pd = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
                 tiempos_pd[k] = d_pd;
-                //printf("Algoritmo de programación dinámica:\nResultado: %d\nTiempo de ejecución: %f\n", pd, d_pd);
-                //printf("\n");
                 
                 clock_gettime(CLOCK_REALTIME, &start);
-                //printf("#");
                 int gr = greedy(c, valor, peso, n);
                 clock_gettime(CLOCK_REALTIME, &end);
                 double d_gr = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
                 tiempos_g[k] = d_gr;
-                //printf("Algoritmo greedy:\nResultado: %d\nTiempo de ejecución: %f\n", gr, d_gr);
-                //printf("\n");
 
                 clock_gettime(CLOCK_REALTIME, &start);
                 int pr = proporcional(c, valor, peso, n);
                 clock_gettime(CLOCK_REALTIME, &end);
                 double d_pr = (end.tv_sec-start.tv_sec)+(end.tv_nsec-start.tv_nsec)/1000000000.0;
                 tiempos_gp[k] = d_pr;
-                //printf("Algoritmo greedy proporcional:\nResultado: %d\nTiempo de ejecución: %f\n", pr, d_pr);
-                //printf("\n");
 
                 
                 if(pd==gr){
-                    //printf("coincidencia para g\n");
                     coincidencias_g++;
                 }
                 if(pd==pr){
-                    //printf("coincidencia para gp\n");
                     coincidencias_gp++;
                 }
                 
-                //printf("%d %d\n", coincidencias_g, coincidencias_gp);
-
-                //printf("%f %f %f\n", d_pd, d_gr, d_pr);
             }
             //SACAR LOS PROMEDIOS
             double total_pd = 0.0, total_g = 0.0, total_gp = 0.0;
@@ -382,34 +328,7 @@ int experimento(int n){
         }
     }
 
-    printf("Tabla PD\n");
-    for(i=0; i<10; i++){
-        for(j=0; j<10; j++){
-            printf("%f  ",promedios_pd[i][j]);
-        }
-        printf("\n");
-    }
-    printf("Tabla Greedy\n");
-    for(i=0; i<10; i++){
-        for(j=0; j<10; j++){
-            printf("%f  ",promedios_g[i][j]);
-        }
-        printf("\n");
-    }
-    printf("Tabla Greedy proporcional\n");
-    for(i=0; i<10; i++){
-        for(j=0; j<10; j++){
-            printf("%f  ",promedios_gp[i][j]);
-        }
-        printf("\n");
-    }
-
-    //printf("Promedio Programación dinámica:\t%f segundos\nPromedio Greedy:\t\t%f segundos\nPromedio greedy proporcional:\t%f segundos\n", promedio_pd, promedio_g, promedio_gp);
-
-
-
-    //printf("%d %d\n", coincidencias_g, coincidencias_gp);
-
+    
 
     generarLatex(promedios_pd, promedios_g, promedios_gp, porcentajes_g, porcentajes_gp, n);
 
@@ -420,7 +339,9 @@ int experimento(int n){
 
 int main(int argc, char* argv[]){
 
-    //printf("%s\n",argv[1]);
+    // generar números aleatorios
+    time_t t;
+    srand((unsigned) time(&t));
 
     if(argc != 2){
 		printf("Argumentos inválidos\n\tIngrese -X si desea ejecutar el modo de ejemplo\n\tIngrese -E=n si desea ejecutar el modo experimento, donde n es un número entero mayor que 0\n");

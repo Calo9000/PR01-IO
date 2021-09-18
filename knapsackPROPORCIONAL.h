@@ -66,7 +66,7 @@ int proporcional(int C, int v[], int p[], int n)
     quicksortProporcional(rendimiento,peso,valor,0,n-1);
     
     for (int i = 0; i<n; i++){
-        if(peso[i]>=capacidad) continue;
+        if(peso[i]>capacidad) continue;
         else{
             total += valor[i];
             capacidad -= peso[i];

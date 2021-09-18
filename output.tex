@@ -10,7 +10,7 @@
 \rhead{Proyecto 1 IC6400}
 \begin{document}
 \section*{Reporte de resultados obtenidos}
-En el presente documento se muestran los resultados de la ejecución de los algoritmos. Las tablas 1, 2 y 3 corresponden con los algoritmos de programación dinámica, greedy y greedy proporcional respectivamente. En cada casilla se muestra el tiempo de ejecución promedio de 100 escenarios. La cantidad de objetos se muestra en la primera fila y la capacidad de la mochila se muestra en la primera columna. Las tablas muestran los resultados en microsegundos ($10^{-6}$ segundos).
+En el presente documento se muestran los resultados de la ejecución de los algoritmos. Las tablas 1, 2 y 3 corresponden con los algoritmos de programación dinámica, greedy y greedy proporcional respectivamente. En cada casilla se muestra el tiempo de ejecución promedio de 10 escenarios. La cantidad de objetos se muestra en la primera fila y la capacidad de la mochila se muestra en la primera columna. Las tablas muestran los resultados en microsegundos ($10^{-6}$ segundos).
 En las tablas 4 y 5 se muestra el porcentaje de veces que los algoritmos greedy tuvieron un resultado que coincide con la solución óptima en cada uno de los escenarios.
 \begin{center}
 \begin{table}[ht]
@@ -20,16 +20,16 @@ En las tablas 4 y 5 se muestra el porcentaje de veces que los algoritmos greedy 
 \begin{tabularx}{0.8\textwidth}{Xr|XXXXXXXXXX}
 &\multicolumn{10}{c}{Cantidad de objetos} \\
 &&10&20&30&40&50&60&70&80&90&100\\\hline
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&20&38&45&59&52&68&69&88&90&92\\
-&200&18&35&54&74&97&112&125&151&168&177\\
-&300&28&55&81&107&143&160&184&211&238&269\\
-&400&37&73&105&141&177&211&246&281&323&379\\
-&500&45&92&138&198&229&265&324&375&451&545\\
-&600&69&135&205&269&309&364&403&428&488&558\\
-&700&72&163&360&295&411&491&571&653&694&756\\
-&800&92&184&276&368&435&495&559&642&713&895\\
-&900&111&199&350&475&560&660&704&703&731&832\\
-&1000&94&185&279&375&465&544&617&762&846&928\\
+\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&9&18&33&37&50&56&66&87&136&100\\
+&200&36&36&56&77&95&113&137&167&180&200\\
+&300&30&55&89&140&172&215&219&250&268&312\\
+&400&37&75&111&157&190&251&300&320&379&391\\
+&500&53&99&154&189&244&318&338&377&425&495\\
+&600&60&109&165&242&330&338&386&488&519&601\\
+&700&71&141&212&300&347&398&552&571&638&700\\
+&800&82&165&267&365&397&479&549&615&696&752\\
+&900&90&176&263&364&490&561&594&716&761&840\\
+&1000&94&184&281&368&474&551&656&813&867&934\\
 \end{tabularx}
 \end{table}
 \begin{table}[ht]
@@ -39,16 +39,16 @@ En las tablas 4 y 5 se muestra el porcentaje de veces que los algoritmos greedy 
 \begin{tabularx}{0.8\textwidth}{Xr|XXXXXXXXXX}
 &\multicolumn{10}{c}{Cantidad de objetos} \\
 &&10&20&30&40&50&60&70&80&90&100\\\hline
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&1&2&3&4&4&5&5&6&7&8\\
-&200&$<$1&1&2&2&4&4&5&6&7&7\\
-&300&$<$1&1&2&2&3&4&5&6&7&8\\
-&400&$<$1&1&2&2&3&4&5&6&7&8\\
-&500&$<$1&1&2&3&3&4&5&6&8&10\\
-&600&$<$1&1&2&3&4&5&6&6&7&8\\
-&700&$<$1&1&4&3&5&6&7&8&9&10\\
-&800&$<$1&1&2&4&4&5&6&8&8&10\\
-&900&$<$1&1&2&4&4&7&7&6&7&8\\
-&1000&$<$1&1&2&3&4&5&5&6&8&8\\
+\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&$<$1&1&1&2&3&4&5&6&7&8\\
+&200&$<$1&1&1&2&3&4&5&6&7&7\\
+&300&$<$1&1&2&3&4&5&5&6&7&8\\
+&400&$<$1&1&1&2&6&4&5&8&7&8\\
+&500&$<$1&1&2&2&3&4&5&6&7&7\\
+&600&$<$1&1&2&2&3&4&5&6&19&8\\
+&700&$<$1&1&2&2&3&4&5&6&7&10\\
+&800&$<$1&1&2&3&3&4&5&6&8&8\\
+&900&$<$1&1&2&2&3&4&5&7&7&8\\
+&1000&$<$1&1&2&2&3&4&5&6&7&8\\
 \end{tabularx}
 \end{table}
 \begin{table}[ht]
@@ -58,16 +58,16 @@ En las tablas 4 y 5 se muestra el porcentaje de veces que los algoritmos greedy 
 \begin{tabularx}{0.8\textwidth}{Xr|XXXXXXXXXX}
 &\multicolumn{10}{c}{Cantidad de objetos} \\
 &&10&20&30&40&50&60&70&80&90&100\\\hline
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&1&2&4&6&6&8&8&10&12&14\\
-&200&$<$1&1&2&3&5&6&8&10&12&14\\
-&300&$<$1&1&2&3&4&6&8&10&12&15\\
-&400&$<$1&1&2&3&4&6&8&9&12&15\\
-&500&$<$1&1&2&3&5&6&8&11&14&17\\
-&600&$<$1&1&3&4&5&7&9&10&12&14\\
-&700&$<$1&2&5&4&6&9&11&13&15&17\\
-&800&$<$1&1&3&4&5&7&10&12&13&17\\
-&900&1&2&3&6&8&10&10&10&12&14\\
-&1000&$<$1&1&2&3&5&7&8&10&12&15\\
+\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&$<$1&1&2&3&7&10&9&11&15&16\\
+&200&$<$1&1&2&3&5&10&9&11&15&16\\
+&300&$<$1&1&2&4&5&7&11&11&14&24\\
+&400&$<$1&1&2&3&7&9&9&12&14&17\\
+&500&$<$1&1&2&3&5&7&9&11&14&18\\
+&600&$<$1&1&2&3&5&7&9&11&15&18\\
+&700&$<$1&1&2&3&5&7&9&11&15&17\\
+&800&$<$1&1&2&4&5&7&16&11&14&16\\
+&900&$<$1&1&3&3&5&8&9&13&14&17\\
+&1000&$<$1&1&2&3&5&7&9&11&16&17\\
 \end{tabularx}
 \end{table}
 \begin{table}[ht]
@@ -77,16 +77,16 @@ En las tablas 4 y 5 se muestra el porcentaje de veces que los algoritmos greedy 
 \begin{tabularx}{0.8\textwidth}{Xr|XXXXXXXXXX}
 &\multicolumn{10}{c}{Cantidad de objetos} \\
 &&10&20&30&40&50&60&70&80&90&100\\\hline
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&77\%&8\%&4\%&2\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&200&77\%&21\%&7\%&2\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&300&84\%&31\%&2\%&5\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&400&78\%&26\%&6\%&0\%&0\%&2\%&0\%&0\%&0\%&0\%\\
-&500&81\%&27\%&7\%&5\%&1\%&1\%&0\%&0\%&0\%&0\%\\
-&600&88\%&20\%&5\%&4\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&700&82\%&33\%&9\%&2\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&800&75\%&23\%&14\%&2\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&900&85\%&29\%&10\%&3\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&1000&84\%&29\%&4\%&1\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&70\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&200&90\%&30\%&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&300&90\%&30\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&400&90\%&20\%&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&500&90\%&10\%&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&600&90\%&40\%&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&700&80\%&30\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&800&80\%&40\%&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&900&70\%&40\%&10\%&10\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&1000&80\%&30\%&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
 \end{tabularx}
 \end{table}
 \begin{table}[ht]
@@ -96,16 +96,16 @@ En las tablas 4 y 5 se muestra el porcentaje de veces que los algoritmos greedy 
 \begin{tabularx}{0.8\textwidth}{Xr|XXXXXXXXXX}
 &\multicolumn{10}{c}{Cantidad de objetos} \\
 &&10&20&30&40&50&60&70&80&90&100\\\hline
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&12\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&200&16\%&1\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&300&18\%&1\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&400&21\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&500&18\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&600&12\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&700&15\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&800&8\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=r]{90}{Capacidad de la mochila}}}&100&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&200&30\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&300&30\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&400&30\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&500&20\%&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&600&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&700&0\%&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&800&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
 &900&10\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
-&1000&14\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
+&1000&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%&0\%\\
 \end{tabularx}
 \end{table}
 \end{center}

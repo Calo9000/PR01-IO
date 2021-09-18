@@ -52,23 +52,9 @@ int greedy(int C, int v[], int p[], int n)
 
     quicksort(valor,peso,0,n-1);
 
-    /*
-    printf("\nLista Ordenada \n");
-    for (int i=0; i<n; i++) {
-        printf("%d",valor[i]);
-        if(i<n-1)
-            printf(",");
-    }
-    printf("\n");
-    for (int i=0; i<n; i++) {
-        printf("%d",peso[i]);
-        if(i<n-1)
-            printf(",");
-    }
-    */
     
     for (int i = 0; i<n; i++){
-        if(peso[i]>=capacidad) continue;
+        if(peso[i]>capacidad) continue;
         else{
             total += valor[i];
             capacidad -= peso[i];

@@ -14,14 +14,14 @@ Se tienen 6 objetos con valores y pesos diferentes. Se cuenta con una mochila qu
 \centering
 \begin{tabular}{r|rrrrrr}
 & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
-Valor&4&18&14&7&10&3\\
-Peso&5&6&4&3&4&6\\
+Valor&3&12&7&11&18&4\\
+Peso&1&5&5&3&5&3\\
 \end{tabular}
 \end{table}
 \subsection*{II. Algoritmo de Programación dinámica}
 
-Se debe maximizar $$Z = 4x_1+18x_2+14x_3+7x_4+10x_5+3x_6$$ 
-Sujeto a $$5x_1+6x_2+4x_3+3x_4+4x_5+6x_6\leq 15$$
+Se debe maximizar $$Z = 3x_1+12x_2+7x_3+11x_4+18x_5+4x_6$$ 
+Sujeto a $$1x_1+5x_2+5x_3+3x_4+5x_5+3x_6\leq 15$$
 La siguiente tabla muestra la matriz que se generó al ejecutar el algoritmo de programación dinámica.
 \begin{table}[h]
 \centering
@@ -29,54 +29,55 @@ La siguiente tabla muestra la matriz que se generó al ejecutar el algoritmo de 
 \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
 \hline&1&2&3&4&5&6 \\
 \hline 0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0\\
-\hline 1&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0\\
-\hline 2&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0\\
-\hline 3&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{green}7&\cellcolor{red}7\\
-\hline 4&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{red}0&\cellcolor{green}14&\cellcolor{red}14&\cellcolor{red}14\\
-\hline 5&\cellcolor{red}0&\cellcolor{green}4&\cellcolor{red}4&\cellcolor{green}14&\cellcolor{red}14&\cellcolor{red}14\\
-\hline 6&\cellcolor{red}0&\cellcolor{green}4&\cellcolor{green}18&\cellcolor{red}18&\cellcolor{red}18&\cellcolor{red}18\\
-\hline 7&\cellcolor{red}0&\cellcolor{green}4&\cellcolor{green}18&\cellcolor{red}18&\cellcolor{green}21&\cellcolor{red}21\\
-\hline 8&\cellcolor{red}0&\cellcolor{green}4&\cellcolor{green}18&\cellcolor{red}18&\cellcolor{green}21&\cellcolor{green}24\\
-\hline 9&\cellcolor{red}0&\cellcolor{green}4&\cellcolor{green}18&\cellcolor{red}18&\cellcolor{green}25&\cellcolor{red}25\\
-\hline 10&\cellcolor{red}0&\cellcolor{green}4&\cellcolor{green}18&\cellcolor{green}32&\cellcolor{red}32&\cellcolor{red}32\\
-\hline 11&\cellcolor{red}0&\cellcolor{green}4&\cellcolor{green}22&\cellcolor{green}32&\cellcolor{red}32&\cellcolor{red}32\\
-\hline 12&\cellcolor{red}0&\cellcolor{green}4&\cellcolor{green}22&\cellcolor{green}32&\cellcolor{red}32&\cellcolor{red}32\\
-\hline 13&\cellcolor{red}0&\cellcolor{green}4&\cellcolor{green}22&\cellcolor{green}32&\cellcolor{green}39&\cellcolor{red}39\\
-\hline 14&\cellcolor{red}0&\cellcolor{green}4&\cellcolor{green}22&\cellcolor{green}32&\cellcolor{green}39&\cellcolor{green}42\\
+\hline 1&\cellcolor{green}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3\\
+\hline 2&\cellcolor{green}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{red}3\\
+\hline 3&\cellcolor{green}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{green}11&\cellcolor{red}11&\cellcolor{red}11\\
+\hline 4&\cellcolor{green}3&\cellcolor{red}3&\cellcolor{red}3&\cellcolor{green}14&\cellcolor{red}14&\cellcolor{red}14\\
+\hline 5&\cellcolor{green}3&\cellcolor{green}12&\cellcolor{red}12&\cellcolor{green}14&\cellcolor{green}18&\cellcolor{red}18\\
+\hline 6&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{red}15&\cellcolor{red}15&\cellcolor{green}21&\cellcolor{red}21\\
+\hline 7&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{red}15&\cellcolor{red}15&\cellcolor{green}21&\cellcolor{red}21\\
+\hline 8&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{red}15&\cellcolor{green}23&\cellcolor{green}29&\cellcolor{red}29\\
+\hline 9&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{red}15&\cellcolor{green}26&\cellcolor{green}32&\cellcolor{red}32\\
+\hline 10&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}19&\cellcolor{green}26&\cellcolor{green}32&\cellcolor{red}32\\
+\hline 11&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}22&\cellcolor{green}26&\cellcolor{green}33&\cellcolor{red}33\\
+\hline 12&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}22&\cellcolor{green}26&\cellcolor{green}33&\cellcolor{green}36\\
+\hline 13&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}22&\cellcolor{green}30&\cellcolor{green}41&\cellcolor{red}41\\
+\hline 14&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}22&\cellcolor{green}33&\cellcolor{green}44&\cellcolor{red}44\\
+\hline 15&\cellcolor{green}3&\cellcolor{green}15&\cellcolor{green}22&\cellcolor{green}33&\cellcolor{green}44&\cellcolor{red}44\\
 \hline
 \end{tabularx}
 \end{table}
 
-Resultado obtenido por el algoritmo: 42
+Resultado obtenido por el algoritmo: 44
 
-Tiempo de ejecución: 0.000004 segundos.
+Tiempo de ejecución: 0.000001 segundos.
 \subsection*{III. Algoritmo greedy}
 En la siguiente tabla se muestran los datos usados por el algoritmo greedy.
 \begin{table}[h]
 \centering
 \begin{tabular}{r|rrrrrr}
-Valor&18&14&10&7&4&3\\
-Peso&6&4&4&3&5&6\\
-\hline Capacidad Restante&9&5&1&1&1&1\\
+Valor&18&12&11&7&4&3\\
+Peso&5&5&3&5&3&1\\
+\hline Capacidad Restante&10&5&2&2&2&1\\
 \end{tabular}
 \end{table}
 
-Resultado obtenido por el algoritmo: 42
+Resultado obtenido por el algoritmo: 44
 
-Tiempo de ejecución: 0.000002 segundos.
+Tiempo de ejecución: 0.000001 segundos.
 \subsection*{IV. Algoritmo greedy proporcional}
 En la siguiente tabla se muestran los datos usados por el algoritmo greedy proporcional.
 \begin{table}[h]
 \centering
 \begin{tabular}{r|rrrrrr}
-Valor&14&18&10&7&4&3\\
-Peso&4&6&4&3&5&6\\
-Rendimiento&3.5&3&2.5&2.3&0.8&0.5\\
-\hline Capacidad Restante&11&5&1&1&1&1\\
+Valor&11&18&3&12&7&4\\
+Peso&3&5&1&5&5&3\\
+Rendimiento&3.7&3.6&3&2.4&1.4&1.3\\
+\hline Capacidad Restante&12&7&6&1&1&1\\
 \end{tabular}
 \end{table}
 
-Resultado obtenido por el algoritmo: 42
+Resultado obtenido por el algoritmo: 44
 
-Tiempo de ejecución: 0.000002 segundos.
+Tiempo de ejecución: 0.000001 segundos.
 \end{document}

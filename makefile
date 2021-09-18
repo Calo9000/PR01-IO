@@ -1,4 +1,4 @@
-TARGET=object
+TARGET=knapsack
  
 # compiler
 CC=gcc

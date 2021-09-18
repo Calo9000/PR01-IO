@@ -11,7 +11,7 @@ En el cual se ejecutarán en 2 principales ejecuciones: modo ejemplo y modo expe
 La elaboración de este proyecto fue realizada en el lenguaje de programación C en un sistema operativo Linux.
 
 INSTRUCCIONES DE UTILIZACIÓN:
-1) Para compilar el programa se debe ingresar a la terminal dentro de la carpeta del proyecto (PR01-IO). 
+1) Para compilar el programa se debe ingresar a la terminal dentro de la carpeta del proyecto. 
    1) a) Antes de compilar/ejecutar el programa es importante instalar pdfLatex para poder visualizar el PDF resultante,
          para esto se debe ingresar el siguiente comando dentro de la terminal que se abrió: sudo apt-get install texlive-latex-base.
 2) Dentro de la terminal se debe ingresar el comando "make".
@@ -54,9 +54,10 @@ INSTRUCCIONES DE UTILIZACIÓN:
       Finalmente se despliega una tabla en un PDF con:
       -La descripción del problema junto con la tabla que contiene los respectivos pesos y valores-
       
-      -El resultado de la Programación Dinámica en la cual se muestran de color verde los valores que se incluyen dentro de la solución, y en rojo los valores que no se utilizan en la solución. Seguidamente aparece la forma matemática del problema inicial. Y finalmente, el resultado obtenido por el algoritmo y el tiempo de ejecución en segundos.
+      -El resultado de la Programación Dinámica en la cual se muestran de color verde los valores que se incluyen dentro de la solución, y en rojo los valores que no se utilizan en la solución. Además aparece la forma matemática del problema inicial. Y finalmente, el resultado obtenido por el algoritmo y el tiempo de ejecución en segundos.
+	-El resultado obtenido por medio de cada uno de los algoritmos greedy, acompañado de una tabla que ilustra el proceso por el cual se llegó a esa solución. Finalmente aparece el resultado y el tiempo de ejecución 
 
-4) b) Si se ejecuta el segundo comando dentro de la terminal, el programa despliegara un documento PDF con 5 tablas en donde:
+4) b) Si se ejecuta el segundo comando dentro de la terminal, el programa desplegará un documento PDF con 5 tablas en donde:
 ------------
       -La primera tabla corresponde al tiempo promedio de ejecución con la Programación Dinámica
       -La segunda tabla corresponde al tiempo promedio de ejecución con el Algoritmo Greedy
